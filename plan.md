@@ -3,8 +3,17 @@
 Part 1: From Scheme to C
 Part 2: From JavaScript to Scheme
 
+Part 1: From Scheme to C
+========================
+
+// what is Scheme?
+// polymorphism
+// higher order
+// call/cc
+// garbage collection
+
 Why Scheme? What is Scheme?
-===========================
+---------------------------
 
   * a FL
   * strict, polymorphic
@@ -16,7 +25,7 @@ Why Scheme? What is Scheme?
   * SICP
 
 Scheme Primer 1
-===============
+---------------
 
   * Many implementations
     - Guile (url...)
@@ -26,7 +35,7 @@ Scheme Primer 1
     - ...
 
 Scheme Primer 2
-===============
+---------------
 
 A weird syntax (but it's only syntax)
 
@@ -46,7 +55,7 @@ A weird syntax (but it's only syntax)
         \x . M x === M if x free in M
 
 Scheme Primer 3
-===============
+---------------
 
 Church numbers
 
@@ -64,7 +73,7 @@ Church numbers
         // f => x => f(f(f(x)))
     
 Scheme Primer 4
-===============
+---------------
 
   - Expression based
     - no statments, 
@@ -86,7 +95,7 @@ Scheme Primer 4
 	- quote
 	
 Scheme Primer 5
-===============
+---------------
 
 The (pure) beauty of Scheme
 
@@ -114,7 +123,7 @@ The (pure) beauty of Scheme
 	  // --[1, 2].slice(1)--
 	
 Scheme Primer 6
-===============
+---------------
 
   - More syntactic sugar
   
@@ -150,7 +159,7 @@ Scheme Primer 6
 		 (else (print "z")))
 		 
 Scheme Primer 7
-===============
+---------------
 
   - Apply
      (let ((f (lambda (x y z) (+ x y z))))
@@ -169,7 +178,7 @@ Scheme Primer 7
 	       f.apply(undefined, [1, 2, 3]); }--
 		   
 Scheme, a DSL for compilers
-===========================
+---------------------------
 
   How to write a compiler in Scheme? 
   
@@ -186,7 +195,7 @@ Scheme, a DSL for compilers
 	   const add5 = eval(comp(5))
 	 
 Scheme macros
-=============
+-------------
 
   (define-macro (comp n)
      `(lambda (x) (+ x ,n)))
@@ -200,8 +209,26 @@ Scheme macros
   (define add5 (lambda (x) (+ x 5)))
   (add5 10) ~~ 15
 	 
+Scheme call/cc
+--------------
+
+```scheme
+(define (f)
+  (let loop ((i 0))
+    (if (< i 10)
+	   (begin
+         (print "i=" i)
+	     (call/cc (lambda (k) (loop (+))
+           (loop (+ i 1))))))))
+
+(let ((k (f)))
+   (k 10)
+   (k 20))
+```
+
+
 Why do I love Scheme?
-=====================
+---------------------
 
   - minimalist core language
   - beauty of the core concepts
@@ -210,7 +237,7 @@ Why do I love Scheme?
   - its untypedness
   
 Scheme to C, the challenges
-===========================
+---------------------------
 
   - polymorphism
     (lambda (x) x)
@@ -229,7 +256,7 @@ Scheme to C, the challenges
   - garbage collection
 
 Polymorphism
-============
+------------
 
   How to compile (lambda (x) x)?
   
@@ -238,7 +265,7 @@ Polymorphism
 	#define id(x) x
 	
 Polymorphism, boxing & tagging
-==============================
+------------------------------
 
   - code alone is not enough
   - code + encoding
@@ -270,7 +297,7 @@ typeof union val {
 ```
 
 Polymorphism, fixnums 1
-=======================
+-----------------------
 
 ```
 enum types { FIXNUM, FLONUM, PAIR, FUNCTION, ... };
@@ -309,7 +336,7 @@ obj_t id(obj_t x) {
 ```
 
 Polymorphism, fixnums 2
-=======================
+-----------------------
 
   * type checking
   * overflow
@@ -319,7 +346,7 @@ Polymorphism, fixnums 2
   * allocation
 
 Polymorphism, fixnums 3
-=======================
+-----------------------
 
   * unsafe, unbounded arithmetic
     +, +fx, +bx, +fl, ...
@@ -328,7 +355,7 @@ Polymorphism, fixnums 3
   * use tagging
   
 Polymorphism, fixnums 4
-=======================
+-----------------------
   
 ```
 #define MAKE_FX(long n) (n << 3)
@@ -341,14 +368,14 @@ Polymorphism, fixnums 4
 ```
   
 Polymorphism, futher reading
-============================
+----------------------------
 
 - Boxing/unboxing
 - Storage Usage Analysis
 - Julia
 
 Higher order
-============
+------------
 
 How to compile?
 
@@ -369,7 +396,7 @@ add5 = adder(MAKE_FX(5));
 ```
 
 Higher order, closure
-=====================
+---------------------
 
 ```
 struct _function {
@@ -401,7 +428,7 @@ obj_t lambda0(obj_t clo, obj_t y) {
 ```
 
 Higher order, first-order
-=========================
+-------------------------
 
 When is a full-fledged closures required?
 
@@ -451,7 +478,7 @@ sum_pair:
 ```
 
 Higher order, lambda-lifting, and tail-recursion
-================================================
+------------------------------------------------
 
 What about this one?
 
@@ -500,7 +527,7 @@ obj_t copy_pair_loop(obj_t o) {
 ```
   
 Higher order, lambda-lifting
-============================
+----------------------------
 
 ```
 (define (F n m)
@@ -529,7 +556,7 @@ obj_t functionA(obj_t n) {
 ```
 
 Higher order, lambda-lifting, and mutation
-==========================================
+------------------------------------------
 
 ```
 (define (F n m)
@@ -559,8 +586,217 @@ obj_t functionA(obj_t n) {
 }
 ```
 
+Call/cc compilation
+-------------------
+
 Garbage collection
-==================
+------------------
   
+Allocations are implicit => Garbage cllection
+
+Two main techniques: stop&copy, mark&sweep
+
+Garbage collection, stop&copy
+-----------------------------
+
+  * Two semi-spaces
+  * bump allocation
+  * when the first semi-space is full
+    - stop the word
+	- copy the live objects into the second semi-space starting from
+	  the roots
+  * swap the spaces
   
+  + complexity proportional of the life objects
+  + compacting
+  - wast half of the memory
+
+Garbage collection, mark&sweep
+------------------------------
+
+  * free lists allocation (2, 4, 8, 16, 32, ...)
+  * when one free list is empty
+    - mark the live objects from the roots
+	- sweep the unmarked objects and move them in to the free lists
+  
+  - complexity proportional of the allocated objects
+  - use the whole space
+
+Garbage collection, generational
+--------------------------------
+
+  * one small space (size of the cache) + a large main heap
+  * bump allocationon the small space
+  * when the generation is full
+    - stop the world 
+	- copy the live objects into the main heap
+  * when the main heap is full
+    - mark&sweep the main heap
+  
+  + fit the cache
+  + complexity proportional of the live objects
+  + use the whole space
+  - backpointers
+
+Garbage collecting C?
+---------------------
+
+  - The roots
+    - the global variable
+	- the activation frames
+	- the registers
+  - How to distinguish integers from pointers?
+    => do not distinguish => ambiguous roots
+	   - contraints by
+	     - alignment
+		 - bit patterns
+		 - free lists ranges
+    - conservative
+	   => no copy => mark&sweep
+	   => may retain memory too long
+	   => dependent of C compiler optimizations
 	
+	
+Part 2: From JavaScript to Scheme
+=================================
+
+// a crazy language
+// local variables
+// hidden classes
+// occurrence typing, hint typing
+// arithmetic
+// range analysis
+// speculation, specialized compilation
+// generator
+// language extension, sealed classes
+
+A Crazy Language
+----------------
+
+  * Created in 10 days in 1995 at Mozilla
+  * According to B. Eich, JS = Scheme + Self + C syntax
+  * ECMALanguage
+  * (in)formal specification
+  * One version per year
+  
+JavaScript Crazyness
+--------------------
+
+  cf slides AOT
+  
+  
+Local variables
+---------------
+
+```javascript
+function f(v) {
+   console.log("here");
+   var l = v.length;
+   return l;
+}
+```
+
+->
+
+```scheme
+(define (f this v)
+   (let ((l js-undefined))
+      ((js-get console "log") js-undefined "here")
+	  (set! l (js-get v "length"))
+	  l))
+```
+
+Local variables, again...
+-------------------------
+
+```javascript
+function f(v) {
+   var fs = [];
+   var l = v.length;
+   for (let i = 0; i < l; i++) {
+     fs.push(() => i + v[i]);
+   }
+   return fs.map(g => g());
+}
+f([1,1,1]) => [1, 2, 3]
+```
+
+->
+
+```scheme
+(define (f v)
+   (let ((fs (js-new Array 0))
+         (l (js-get v "length")))
+	 (let ((i' 0))
+	   (let for ()
+	      (if (js-lt i' l)
+             (let ((i i'))
+	            ((js-get fs "push") (lambda (_) (js-plus i (js-get v i))))
+		        (set! (js-inc i))
+		        (set! i' i)
+		        (for)))))))
+```
+
+
+Let, at last
+------------
+
+* saner semantics
+* deadzone access
+
+
+Local variables compilation
+---------------------------
+
+  1 symbol resolution
+  2 multiple variable
+  3 scope narrowing
+  4 let fusion
+  5 let fun
+  6 let opt
+  7 var -> let
+  8 uninitialized variables
+  -------------------------
+  4 KLOC ~ 5.6% of the compiler
+  
+
+Property accesses
+-----------------
+
+  CC dynamic + CC proxy
+
+Occurrence typing, hint typing
+------------------------------
+
+Reprendre les slides
+
+Arithmetic
+----------
+
+Reprendre les slides AOT
+
+Reprendre les slides sur la range analysis
+
+Speculation
+-----------
+
+La compilation d'arguments
+
+Language extension
+------------------
+
+  * sloppy mode
+  * strict mode
+  * strong mode
+  * hopscript mode
+  
+Generators
+----------
+
+  * A call/cc version
+  * CPS conversion
+
+Sealed classes (Ecoop)
+----------------------
+
+Reprendre les slides d'Ecoop
