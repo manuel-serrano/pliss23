@@ -1,12 +1,12 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/pliss23/part2/variables/comp.js           */
+/*    serrano/diffusion/talk/pliss23/part2/ox/mono.js                  */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:36:34 2023                          */
-/*    Last change :  Tue Aug 22 14:02:46 2023 (serrano)                */
+/*    Last change :  Tue Aug 22 16:38:14 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
-/*    Compiling variables                                              */
+/*    A slide                                                          */
 /*=====================================================================*/
 "use hopscript";
 
@@ -15,61 +15,43 @@
 /*---------------------------------------------------------------------*/
 import * as path from "path";
 import * as impress from "hopimpress-0.6.*.hz";
-import { MARKDOWN as MD } from "hop:markdown";
+import { LSTINPUTLISTING } from "../../listings.js";
 
 /*---------------------------------------------------------------------*/
-/*    Compiler                                                         */
+/*    mono                                                             */
 /*---------------------------------------------------------------------*/
-export const comp = <impress.slide title="compiler">
-   <h1 class="markdown">Compiling variable declarations</h1>
-
-   <ol class="markdown">
-     <li step="1-">symbol resolution</li>
-     <li step="2-">multiple variable</li>
-     <li step="3-">scope narrowing</li>
-     <li step="4-">let fusion</li>
-     <li step="5-">let fun</li>
-     <li step="6-">let opt</li>
-     <li step="7-">var -> let</li>
-     <li step="8-">uninitialized variables</li>
-   </ol>
-
-<h2 step="9"><strong>5</strong> KLOC ~ <strong>7%</strong> of the compiler</h2>
+export const mono = <impress.slide title="o.x (monomorphic)">
+   <div class="imgcontainer">
+     <div class="svgcontainer" step="0">
+       <svg:img id="mono1" width="100%" height="100%" src=${require.resolve( "./svg/cache-remainder.svg" )}/>
+     </div>
+     <div class="svgcontainer" step="1">
+       <svg:img id="mono2" width="100%" height="100%" src=${require.resolve( "./svg/cache-mono.svg" )}/>
+     </div>
+  </div>
 </impress.slide>  
 
 /*---------------------------------------------------------------------*/
 /*    style                                                            */
 /*---------------------------------------------------------------------*/
-comp.css = <style>
-.body * {
-   transition: 1s all;
-}
-
-pre {
-   font-size: 40%;
-}
-
-strong {
-   color: var(--red);
-}
-
-h1 {
-   font-size: 120%;
-}
-
-h2 {
-   font-size: 80%;
+mono.css = <style>
+.imgcontainer {
+   position: relative;
+   border: 4px solid var(--grey);
+   width: 70%;
+   height: 95%;
+   background-color: white;
+   margin-left: auto;
+   margin-right: auto;
    text-align: center;
 }
 
-ol {
-   color: var(--greydark);
-   font-size: 80%;
-   font-weight: bold;
-   margin-left: 1em;
-   margin-top: 2ex;
-   column-count: 2;
-}
+.imgcontainer .svgcontainer {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+}		 
 </style>
 	
-

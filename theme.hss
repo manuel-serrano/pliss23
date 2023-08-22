@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Mon May 23 10:35:36 2022                          */
-/*    Last change :  Tue Aug 22 10:33:55 2023 (serrano)                */
+/*    Last change :  Tue Aug 22 17:54:11 2023 (serrano)                */
 /*    Copyright   :  2022-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    PLISS23 theme                                                    */
@@ -18,7 +18,7 @@
     --greyverydark: #303030;
     --greyextralight: #eeefe9;
     --greyverylight: #e0e2db;
-    --greyalmostwhite: #f0f0e9;
+    --greyalmostwhite: #fcfcfa;
     --red: #f53736;
     --blue: #3ac9ec;
     --bluedark: #369abe;

@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  manuel serrano                                    */
 /*    Creation    :  Sat Aug 13 15:56:38 2022                          */
-/*    Last change :  Tue Aug 22 10:21:10 2023 (serrano)                */
+/*    Last change :  Tue Aug 22 15:12:18 2023 (serrano)                */
 /*    Copyright   :  2022-23 manuel serrano                            */
 /*    -------------------------------------------------------------    */
 /*    C Property access                                                */
@@ -17,12 +17,10 @@ import * as path from "path";
 import * as impress from "hopimpress-0.6.*.hz";
 import { LSTINPUTLISTING } from "../../listings.js";
 
-export { oxC };
-
 /*---------------------------------------------------------------------*/
 /*    oxC                                                              */
 /*---------------------------------------------------------------------*/
-const oxC = <impress.slide title="o.x (C)" class="javascript">
+export const oxC = <impress.slide title="o.x (C)" class="javascript">
   <div class="c code">
     <lstinputlisting language="c" src=${require.resolve("./src/struct.c")}/>
   </div>
@@ -31,7 +29,10 @@ const oxC = <impress.slide title="o.x (C)" class="javascript">
     <lstinputlisting language="asm" src=${require.resolve("./src/struct.s")}/>
   </div>
 </impress.slide>  
-		
+
+/*---------------------------------------------------------------------*/
+/*    style                                                            */
+/*---------------------------------------------------------------------*/
 oxC.css = <style>
 .body * {
    transition: 1s all;
