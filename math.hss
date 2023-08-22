@@ -1,0 +1,76 @@
+/*=====================================================================*/
+/*    serrano/diffusion/talk/jsaot17/math.hss                          */
+/*    -------------------------------------------------------------    */
+/*    Author      :  Manuel Serrano                                    */
+/*    Creation    :  Sun Aug 27 16:00:16 2017                          */
+/*    Last change :  Wed Aug 30 16:14:56 2017 (serrano)                */
+/*    Copyright   :  2017 Manuel Serrano                               */
+/*    -------------------------------------------------------------    */
+/*    Math style                                                       */
+/*=====================================================================*/
+
+.math {
+  font-family: cmr;
+  font-size: 40%;
+}
+
+.math sub,
+math sub,
+.math sup,
+math sup {
+  font-size: 60%;
+}
+
+.math {
+   font-family: cmr;
+   position: relative;
+}
+  
+.math .var {
+  font-family: cmmi;
+}
+  
+.math .cal {
+   font-family: cmsy;
+   font-size: 95%;
+}
+
+.math .cursive {
+  font-family: cmsy;
+  font-weight: 200;
+  line-height: 40%;
+}
+  
+.math .greek {
+  font-family: serif;
+}
+
+.math .op {
+  font-size: 75%;
+  position: relative;
+  top: -2px;
+}
+
+.math .arrow {
+  font-family: serif;
+  font-weight: normal;
+}
+
+.math tt {
+  font-family: CourierMono;
+}
+  
+.math .keyword {
+  font-weight: bold;
+}
+
+.math td.fraq {
+  border-bottom: 2px solid;
+}
+
+td.tyrule-name {
+  vertical-align: middle;
+  font-variant: small-caps;
+  font-size: 80%;
+  padding-left: 0.5em;
+}

@@ -1,0 +1,49 @@
+/*=====================================================================*/
+/*    serrano/diffusion/talk/ecoop22/listings.hss                      */
+/*    -------------------------------------------------------------    */
+/*    Author      :  manuel serrano                                    */
+/*    Creation    :  Tue May 24 09:02:20 2022                          */
+/*    Last change :  Thu Jun  2 11:38:36 2022 (serrano)                */
+/*    Copyright   :  2022 manuel serrano                               */
+/*    -------------------------------------------------------------    */
+/*    Listing configuration                                            */
+/*=====================================================================*/
+
+/*---------------------------------------------------------------------*/
+/*    listings ...                                                     */
+/*---------------------------------------------------------------------*/
+.listings {
+    font-size: var(--listingFontSize);
+    font-family: CourierMono;
+    width: 95%;
+    background: white;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-left: 4px;
+    padding: 8px;
+    color: black;
+}
+
+.listings {
+    border-left: 8px solid;
+}
+
+.hopscript {
+    border-left-color: var(--hopscript-color);
+}
+
+.javascript {
+    border-left-color: var(--javascript-color);
+}
+
+/*---------------------------------------------------------------------*/
+/*    fontifier                                                        */
+/*---------------------------------------------------------------------*/
+.hopscript .fontifier-prog .sealed,
+.hopscript .fontifier-prog .class,
+.javascript .class {
+    color: var(--purple);
+}

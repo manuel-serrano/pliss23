@@ -1,0 +1,22 @@
+{
+   "grey": "#797979",
+   "greyred": "#897979",
+   "greylight": "#d2d2d2",
+   "greydark": "#505050",
+   "greyverydark": "#303030",
+   "greyextralight": "#eeefe9",
+   "greyverylight": "#e0e2db",
+   "greyalmostwhite": "#f0f0e9",
+   "red": "#f53736",
+   "blue": "#3ac9ec",
+   "bluedark": "#369abe",
+   "blueverydark": "#2971D5",
+   "green": "#88a65e",
+   "greendark": "#057000",
+   "yellow": "#d0ed5c",
+   "citron": "#B55B09",
+   "orange": "#e66600",
+   "inria": "#df3628",
+   "background": "#f1f2ec",
+   "hopscriptColor": "#ff8d00"
+}

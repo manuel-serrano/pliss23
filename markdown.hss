@@ -1,0 +1,30 @@
+/*=====================================================================*/
+/*    serrano/diffusion/talk/pliss23/markdown.hss                      */
+/*    -------------------------------------------------------------    */
+/*    Author      :  Manuel Serrano                                    */
+/*    Creation    :  Tue Aug 22 09:19:32 2023                          */
+/*    Last change :  Tue Aug 22 09:46:13 2023 (serrano)                */
+/*    Copyright   :  2023 Manuel Serrano                               */
+/*    -------------------------------------------------------------    */
+/*    PLISS'23 Markdown configuration                                  */
+/*=====================================================================*/
+
+h1.markdown {
+    color: var(--greyverydark);
+    text-align: center;
+    margin: 0;
+    text-decoration: underline;
+    font-size: 150%;
+}
+
+ul.markdown {
+    color: var(--grey);
+    margin-top: 1ex;
+}
+
+li.markdown:before {
+    content: "\25cf  ";
+    font-size: 90%;
+    color: var(--red);
+}
+    

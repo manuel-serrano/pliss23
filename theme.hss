@@ -1,0 +1,36 @@
+/*=====================================================================*/
+/*    serrano/diffusion/talk/pliss23/theme.hss                         */
+/*    -------------------------------------------------------------    */
+/*    Author      :  Manuel Serrano                                    */
+/*    Creation    :  Mon May 23 10:35:36 2022                          */
+/*    Last change :  Fri May 27 08:33:32 2022 (serrano)                */
+/*    Copyright   :  2022 Manuel Serrano                               */
+/*    -------------------------------------------------------------    */
+/*    PLISS23 theme                                                    */
+/*=====================================================================*/
+
+:root {
+    --background: #f1f2ec;
+    --grey: #797979;
+    --greyred: #897979;
+    --greylight: #d2d2d2;
+    --greydark: #505050;
+    --greyverydark: #303030;
+    --greyextralight: #eeefe9;
+    --greyverylight: #e0e2db;
+    --greyalmostwhite: #f0f0e9;
+    --red: #f53736;
+    --blue: #3ac9ec;
+    --bluedark: #369abe;
+    --blueverydark: #2971D5;
+    --green: #88a65e;
+    --greendark: #057000;
+    --yellow: #fff363;
+    --citron: #d0ed5c;
+    --orange: #e66600;
+    --purple: #8329D9;
+    --blueviolet: #6555C5;
+    --inria: #df3628;
+    --hopscript-color: #ff8d00;
+    --javascript-color: #ff3506;
+}
