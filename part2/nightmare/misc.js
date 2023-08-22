@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Sat Aug 26 11:04:48 2017                          */
-/*    Last change :  Tue Aug 22 11:21:07 2023 (serrano)                */
+/*    Last change :  Tue Aug 22 13:35:49 2023 (serrano)                */
 /*    Copyright   :  2017-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Compilation preliminary                                          */
@@ -126,7 +126,6 @@ em {
 }
 
 ul {
-   padding-top: 0.2ex;
    color: var(--grey);
 }
 

@@ -1,0 +1,5 @@
+(define (f this v)
+   (let ((l $undefined))
+      (($get console "log") console "here")
+      (#var-assig#set! l#/var-assig# ($get v "length"))
+      l))

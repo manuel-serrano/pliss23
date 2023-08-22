@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 09:19:32 2023                          */
-/*    Last change :  Tue Aug 22 09:46:13 2023 (serrano)                */
+/*    Last change :  Tue Aug 22 13:29:22 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    PLISS'23 Markdown configuration                                  */
@@ -22,9 +22,39 @@ ul.markdown {
     margin-top: 1ex;
 }
 
-li.markdown:before {
+ul.markdown li.markdown:before {
     content: "\25cf  ";
     font-size: 90%;
     color: var(--red);
 }
-    
+
+ul.markdown ul.markdown {
+   margin-top: 0;
+   padding-top: 0;
+   font-size: 80%;
+   color: var(--grey);
+   width: 95%;
+   list-style-type: none;
+   margin-top: 0.2ex;
+}
+
+ul.markdown ul li.markdown:before {
+    content: "\25d0";
+    font-size: 60%;
+    color: var(--red);
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+ol.markdown {
+    counter-reset: item;
+    list-style-type: none;
+    margin-top: 0;
+}
+
+ol.markdown li:before {
+    content: counters(item, ".") ". ";
+    color: var(--grey);
+    counter-increment: item;
+    font-size: 80%;
+}

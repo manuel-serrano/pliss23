@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 12:03:19 2016                          */
-/*    Last change :  Tue Aug 22 10:15:04 2023 (serrano)                */
+/*    Last change :  Tue Aug 22 11:26:08 2023 (serrano)                */
 /*    Copyright   :  2016-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    PLISS23 presentation                                             */
@@ -116,8 +116,7 @@ function slides(width, height) {
       </impress.row>
       
       <impress.row class="row-stack" data-x=0 data-y=${height * 2 + 100}>>
-         ${part2.title}
-         ${part2.nightmare}
+         ${part2}
       </impress.row>
       
    </impress.impress>
@@ -125,6 +124,6 @@ function slides(width, height) {
 
 import { title } from "./title.js";
 import * as part1 from "./part1/part1.js";
-import * as part2 from "./part2/part2.js";
+import { part2 } from "./part2/part2.js";
 
 console.log(`"http://localhost:${hop.port}/hop/pliss23" ready...`);

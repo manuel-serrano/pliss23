@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  manuel serrano                                    */
 /*    Creation    :  Tue May 24 09:02:20 2022                          */
-/*    Last change :  Tue Aug 22 10:32:24 2023 (serrano)                */
+/*    Last change :  Tue Aug 22 11:44:34 2023 (serrano)                */
 /*    Copyright   :  2022-23 manuel serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Listing configuration                                            */
@@ -51,9 +51,20 @@ pre.scheme {
     border-top-color: var(--scheme-color);
 }
 
+pre.scheme .fontifier-prog-server,
+pre.scheme .fontifier-prog-server + span {
+    color: var(--hopscript-color);
+    font-weight: bold;
+}
+
 .listings .lnum {
     font-size: 80%;
     color: var(--greydark);
+}
+
+pre .fontifier-prog .fontifier-prog-line-comment {
+    color: var(--grey);
+    font-style: normal;
 }
 
 /*---------------------------------------------------------------------*/
