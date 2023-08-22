@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 08:46:35 2023                          */
-/*    Last change :  Tue Aug 22 08:47:57 2023 (serrano)                */
+/*    Last change :  Tue Aug 22 10:08:17 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    PLISS23, Part 2                                                  */
@@ -16,4 +16,5 @@
 import * as path from "path";
 
 export { title } from "./title.js";
+export { nightmare } from "./nightmare/nightmare.js";
 

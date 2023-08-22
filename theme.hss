@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Mon May 23 10:35:36 2022                          */
-/*    Last change :  Fri May 27 08:33:32 2022 (serrano)                */
-/*    Copyright   :  2022 Manuel Serrano                               */
+/*    Last change :  Tue Aug 22 10:33:55 2023 (serrano)                */
+/*    Copyright   :  2022-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    PLISS23 theme                                                    */
 /*=====================================================================*/
@@ -33,4 +33,8 @@
     --inria: #df3628;
     --hopscript-color: #ff8d00;
     --javascript-color: #ff3506;
+    --asm-color: #ff3506;
+    --c-color: #2971D5;
+    --scheme-color: #6555C5;
+    --type-color: #355685;
 }

@@ -1,0 +1,36 @@
+/*=====================================================================*/
+/*    serrano/diffusion/talk/pliss23/chapter.hss                       */
+/*    -------------------------------------------------------------    */
+/*    Author      :  Manuel Serrano                                    */
+/*    Creation    :  Tue Aug 22 10:12:59 2023                          */
+/*    Last change :  Tue Aug 22 10:13:01 2023 (serrano)                */
+/*    Copyright   :  2023 Manuel Serrano                               */
+/*    -------------------------------------------------------------    */
+/*    Chapter                                                          */
+/*=====================================================================*/
+
+.chapter {
+    text-align: center;
+}
+
+.chapter .number {
+  margin-top: 1ex;
+  text-decoration: underline;
+  font-size: 100%;
+  color: var(--grey);
+  font-weight: normal;
+  margin-bottom: 0.5ex;
+}
+
+.chapter .title {
+  margin-top: 1ex;
+  color: var(--greydark);
+  font-weight: bold;
+  font-size: 180%;
+}
+
+.chapter .legend {
+  font-size: 80%;
+  color: var(--greydark);
+}
+

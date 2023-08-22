@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 12:03:19 2016                          */
-/*    Last change :  Tue Aug 22 09:40:46 2023 (serrano)                */
+/*    Last change :  Tue Aug 22 10:15:04 2023 (serrano)                */
 /*    Copyright   :  2016-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    PLISS23 presentation                                             */
@@ -61,7 +61,8 @@ service pliss23slides(o) {
    return <html>
      <head css=${[fontifier.css,
 		  impress.css,
-		  pliss23.resource("pliss23.hss")]}
+		  pliss23.resource("pliss23.hss"),
+		  pliss23.resource("chapter.hss")]}
            idiom="scheme"
            include="hop-canvas"
            script=${[impress.jscript]}/>
@@ -116,6 +117,7 @@ function slides(width, height) {
       
       <impress.row class="row-stack" data-x=0 data-y=${height * 2 + 100}>>
          ${part2.title}
+         ${part2.nightmare}
       </impress.row>
       
    </impress.impress>

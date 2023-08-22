@@ -1,10 +1,10 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/ecoop22/listings.hss                      */
+/*    serrano/diffusion/talk/pliss23/listings.hss                      */
 /*    -------------------------------------------------------------    */
 /*    Author      :  manuel serrano                                    */
 /*    Creation    :  Tue May 24 09:02:20 2022                          */
-/*    Last change :  Thu Jun  2 11:38:36 2022 (serrano)                */
-/*    Copyright   :  2022 manuel serrano                               */
+/*    Last change :  Tue Aug 22 10:32:24 2023 (serrano)                */
+/*    Copyright   :  2022-23 manuel serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Listing configuration                                            */
 /*=====================================================================*/
@@ -28,15 +28,32 @@
 }
 
 .listings {
-    border-left: 8px solid;
+    border-top: 6px solid;
 }
 
-.hopscript {
-    border-left-color: var(--hopscript-color);
+pre.hopscript {
+    border-top-color: var(--hopscript-color);
 }
 
-.javascript {
-    border-left-color: var(--javascript-color);
+pre.javascript {
+    border-top-color: var(--javascript-color);
+}
+
+pre.c {
+    border-top-color: var(--c-color);
+}
+
+pre.asm {
+    border-top-color: var(--asm-color);
+}
+
+pre.scheme {
+    border-top-color: var(--scheme-color);
+}
+
+.listings .lnum {
+    font-size: 80%;
+    color: var(--greydark);
 }
 
 /*---------------------------------------------------------------------*/
