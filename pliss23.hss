@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:41:22 2015                          */
-/*    Last change :  Tue Aug 22 09:39:06 2023 (serrano)                */
+/*    Last change :  Wed Aug 23 08:41:35 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    ECOOP22 presentation CSS                                         */
@@ -53,4 +53,25 @@ hopimpress-slide {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/*---------------------------------------------------------------------*/
+/*    important                                                        */
+/*---------------------------------------------------------------------*/
+hopimpress-slide.important {
+  background-color: var(--red);
+  color: var(--greyextralight);
+  font-weight: bold;
+}
+
+hopimpress-slide.important .important {
+  color: var(--yellow);
+}
+
+.important  {
+    color: var(--red);
 }

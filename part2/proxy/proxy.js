@@ -1,12 +1,12 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/pliss23/part2/ox/ox.js                    */
+/*    serrano/diffusion/talk/pliss23/part2/proxy/proxy.js              */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:24:33 2023                          */
-/*    Last change :  Wed Aug 23 08:15:44 2023 (serrano)                */
+/*    Last change :  Wed Aug 23 09:42:04 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
-/*    JavaScript O.X                                                   */
+/*    JavaScript O["X"]                                                */
 /*=====================================================================*/
 "use hopscript";
 
@@ -14,24 +14,17 @@
 /*    import/export ...                                                */
 /*---------------------------------------------------------------------*/
 import { CHAPTER } from "../../chapter.js";
-import { oxc } from "./oxc.js";
-import { oxscm } from "./oxscm.js";
-import { oxjs } from "./oxjs.js";
-import { testjs } from "./testjs.js";
-import { mono } from "./mono.js";
-import { getter } from "./getter.js";
-import { proto } from "./proto.js";
-import { hclass } from "./hclass.js";
-import { poly } from "./poly.js";
+import { dynamic } from "./dynamic.js";
+import { icache } from "./icache.js";
+import { whocares } from "./whocares.js";
 
 /*---------------------------------------------------------------------*/
-/*    ox                                                               */
+/*    proxy                                                            */
 /*---------------------------------------------------------------------*/
-export const ox = [
-   <chapter number="3" title="o.x">
-      hidden classes, inline caches
-      <div class="author">(with Marc Feeley)</div>
+export const proxy = [
+   <chapter number="4" title=${<span class="title">o[<span class="important">"x"</span>]</span>}>
+      dynamic properties, proxy objects
+      <div class="author">(with Robby Findler)</div>
    </chapter>,
-   oxc, oxscm, oxjs, testjs, mono, getter, proto, hclass, poly
+   dynamic, icache, whocares
 ];
-

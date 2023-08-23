@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:36:34 2023                          */
-/*    Last change :  Tue Aug 22 13:37:10 2023 (serrano)                */
+/*    Last change :  Wed Aug 23 08:41:14 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    Let declaration                                                  */
@@ -64,10 +64,6 @@ div.scheme {
 
 .arrowred {
   color: var(--red);
-}
-
-.hidden {
-   display: none;
 }
 
 .note {

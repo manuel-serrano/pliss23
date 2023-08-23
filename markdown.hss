@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 09:19:32 2023                          */
-/*    Last change :  Tue Aug 22 13:29:22 2023 (serrano)                */
+/*    Last change :  Wed Aug 23 09:05:40 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    PLISS'23 Markdown configuration                                  */
@@ -14,7 +14,7 @@ h1.markdown {
     text-align: center;
     margin: 0;
     text-decoration: underline;
-    font-size: 150%;
+    font-size: 120%;
 }
 
 ul.markdown {

@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 10:12:59 2023                          */
-/*    Last change :  Tue Aug 22 10:13:01 2023 (serrano)                */
+/*    Last change :  Wed Aug 23 08:14:14 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    Chapter                                                          */
@@ -22,15 +22,23 @@
   margin-bottom: 0.5ex;
 }
 
-.chapter .title {
-  margin-top: 1ex;
+.chapter div.title {
   color: var(--greydark);
   font-weight: bold;
-  font-size: 180%;
+  font-size: 250%;
+}
+
+.chapter div.title span.title .important {
+  color: var(--red);
 }
 
 .chapter .legend {
   font-size: 80%;
   color: var(--greydark);
+}
+
+.chapter .author {
+  font-size: 70%;
+  color: var(--grey);
 }
 
