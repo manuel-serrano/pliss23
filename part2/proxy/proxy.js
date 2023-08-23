@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:24:33 2023                          */
-/*    Last change :  Wed Aug 23 11:22:24 2023 (serrano)                */
+/*    Last change :  Wed Aug 23 17:52:00 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    JavaScript O["X"]                                                */
@@ -33,6 +33,7 @@ import { solution1 } from "./solution1.js";
 import { dynamic1 } from "./dynamic1.js";
 import { proxyperf2 } from "./proxyperf2.js";
 import { solution2 } from "./solution2.js";
+import { benchmark } from "./benchmark.js";
 
 /*---------------------------------------------------------------------*/
 /*    proxy                                                            */
@@ -45,5 +46,5 @@ export const proxy = [
    dynamic, icache, whocares, forincares, proxycares, proxy, handlers,
    whyproxy, candidate,
    stringjs, mdn, ropes, ropecmp, names, namecmp,
-   proxyperf, solution1, dynamic1, proxyperf2, solution2
+   proxyperf, solution1, dynamic1, proxyperf2, solution2, benchmark
 ];
