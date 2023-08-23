@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:24:33 2023                          */
-/*    Last change :  Wed Aug 23 09:42:04 2023 (serrano)                */
+/*    Last change :  Wed Aug 23 09:50:38 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    JavaScript O["X"]                                                */
@@ -17,6 +17,10 @@ import { CHAPTER } from "../../chapter.js";
 import { dynamic } from "./dynamic.js";
 import { icache } from "./icache.js";
 import { whocares } from "./whocares.js";
+import { forincares } from "./forincares.js";
+import { proxycares } from "./proxycares.js";
+import { handlers } from "./handlers.js";
+import { whyproxy } from "./whyproxy.js";
 
 /*---------------------------------------------------------------------*/
 /*    proxy                                                            */
@@ -26,5 +30,5 @@ export const proxy = [
       dynamic properties, proxy objects
       <div class="author">(with Robby Findler)</div>
    </chapter>,
-   dynamic, icache, whocares
+   dynamic, icache, whocares, forincares, proxycares, proxy, handlers, whyproxy
 ];
