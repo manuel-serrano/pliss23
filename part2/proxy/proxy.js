@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:24:33 2023                          */
-/*    Last change :  Wed Aug 23 09:50:38 2023 (serrano)                */
+/*    Last change :  Wed Aug 23 11:22:24 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    JavaScript O["X"]                                                */
@@ -21,6 +21,18 @@ import { forincares } from "./forincares.js";
 import { proxycares } from "./proxycares.js";
 import { handlers } from "./handlers.js";
 import { whyproxy } from "./whyproxy.js";
+import { candidate } from "./candidate.js";
+import { stringjs } from "./string.js";
+import { mdn } from "./mdn.js";
+import { ropes } from "./ropes.js";
+import { ropecmp } from "./ropecmp.js";
+import { names } from "./names.js";
+import { namecmp } from "./namecmp.js";
+import { proxyperf } from "./proxyperf.js";
+import { solution1 } from "./solution1.js";
+import { dynamic1 } from "./dynamic1.js";
+import { proxyperf2 } from "./proxyperf2.js";
+import { solution2 } from "./solution2.js";
 
 /*---------------------------------------------------------------------*/
 /*    proxy                                                            */
@@ -30,5 +42,8 @@ export const proxy = [
       dynamic properties, proxy objects
       <div class="author">(with Robby Findler)</div>
    </chapter>,
-   dynamic, icache, whocares, forincares, proxycares, proxy, handlers, whyproxy
+   dynamic, icache, whocares, forincares, proxycares, proxy, handlers,
+   whyproxy, candidate,
+   stringjs, mdn, ropes, ropecmp, names, namecmp,
+   proxyperf, solution1, dynamic1, proxyperf2, solution2
 ];

@@ -1,44 +1,52 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/pliss23/part2/nightmare/ox-c.js           */
+/*    serrano/diffusion/talk/pliss23/part2/proxy/ropes.js              */
 /*    -------------------------------------------------------------    */
-/*    Author      :  manuel serrano                                    */
-/*    Creation    :  Sat Aug 13 15:56:38 2022                          */
-/*    Last change :  Wed Aug 23 15:08:48 2023 (serrano)                */
-/*    Copyright   :  2022-23 manuel serrano                            */
+/*    Author      :  Manuel Serrano                                    */
+/*    Creation    :  Tue Aug 22 11:36:34 2023                          */
+/*    Last change :  Wed Aug 23 15:44:09 2023 (serrano)                */
+/*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
-/*    C Property access                                                */
+/*    A slide                                                          */
 /*=====================================================================*/
 "use hopscript";
 
 /*---------------------------------------------------------------------*/
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
+import * as path from "path";
 import * as impress from "hopimpress-0.6.*.hz";
 import { LSTINPUTLISTING } from "../../listings.js";
 
 /*---------------------------------------------------------------------*/
-/*    oxC                                                              */
+/*    ropes                                                            */
 /*---------------------------------------------------------------------*/
-export const oxC = <impress.slide title="o.x (C)" class="javascript">
+export const ropes = <impress.slide title="Ropes">
+  <div class="slide-title">Ropes</div>
   <div class="c code">
-    <lstinputlisting language="c" src=${require.resolve("./src/struct.c")}/>
-  </div>
-  <div class="downarrow" step="1">&#129175;</div>
-  <div class="asm code" step="1">
-    <lstinputlisting language="asm" src=${require.resolve("./src/struct.s")}/>
-  </div>
+    <lstinputlisting language="c" src=${require.resolve("./src/ropes.h")}/>
+   </div>
+  <div class="c code" step="1-">
+    <lstinputlisting language="c" src=${require.resolve("./src/ropes-ascii.h")}/>
+   </div>
+  <div class="c code" step="2">
+    <lstinputlisting language="c" src=${require.resolve("./src/ropes-utf8.h")}/>
+   </div>
 </impress.slide>  
 
 /*---------------------------------------------------------------------*/
 /*    style                                                            */
 /*---------------------------------------------------------------------*/
-oxC.css = <style>
+ropes.css = <style>
 .body * {
    transition: 1s all;
 }
 
 pre {
-   font-size: 40%;
+   font-size: 23%;
+}
+
+div.c {
+   margin-bottom: 0.5ex;
 }
 
 .listings {
@@ -46,15 +54,9 @@ pre {
   margin-bottom: 0;
 }
 
-div.c {
-  margin-top: 0.5ex;
-}
-
-.downarrow {
-  color: var(--c-color);
-  position: relative;
-  left: 1em;
-  line-height: 2ex;  
+.slide-title {
+   margin-bottom: 0.5ex;
+   color: var(--greydark);
 }
 </style>
 	

@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:36:34 2023                          */
-/*    Last change :  Wed Aug 23 10:59:00 2023 (serrano)                */
+/*    Last change :  Wed Aug 23 11:27:50 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    A slide                                                          */
@@ -21,6 +21,7 @@ import { LSTINPUTLISTING } from "../../listings.js";
 /*    handlers                                                         */
 /*---------------------------------------------------------------------*/
 export const handlers = <impress.slide title="Proxy Handlers">
+   <div class="slide-title">JavaScript Proxy</div>
    <table step="0-5">
     <tr>
       <td><div class="obj">o</div>.x</td><td class="semantics" step="4-">get</td>
@@ -48,12 +49,17 @@ handlers.css = <style>
    transition: 1s all;
 }
 
+.slide-title {
+   text-decoration: underline;
+}
+
 .body {
-   font-size: 130%;
    color: var(--greydark);
 }
   
 table {
+   margin-top: 0.5ex;
+   font-size: 110%;
    margin-left: auto;
    margin-right: auto;
 }
