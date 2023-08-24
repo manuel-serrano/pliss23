@@ -1,9 +1,9 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/pliss23/part1/primer/syntax.js            */
+/*    serrano/diffusion/talk/pliss23/part1/primer/beauty.js            */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Thu Aug 24 16:55:06 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 16:54:41 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -19,22 +19,27 @@ import { MARKDOWN as MD } from "hop:markdown";
 /*---------------------------------------------------------------------*/
 /*    A slide ...                                                      */
 /*---------------------------------------------------------------------*/
-export const slide = <impress.slide title="Syntax" class="md">
+export const slide = <impress.slide title="Expression based" class="md">
    <MD>
-A weird syntax (but it is only syntax)
-======================================
+   ${<div class="center">The (pure) beauty of Scheme</div>}
 
-${<div class="center">As close as possible to the untyped ${<span>&lambda;</span>}-calculus</div>}
+${<div class="head">programs &equiv; data</div>}
 
-   * abstraction: ${<span class="math">&lambda;x.M</span>}
-      * `(lambda (x) M)`
-      * `x => M`
-   * application: ${<span class="math">(M N)</span>}
-      * `(M N)`
-      * `M(N)`
-   * alpha-conversion: ${<span class="math">&lambda;x.M[x] &equiv; &lambda;y.M[y]</span>}
-   * beta-reduction: ${<span class="math">((&lambda;x.M) E) &equiv; (M[x := E])</span>}
-   * eta-conversion: ${<span class="math">((&lambda;x.M x) E) &equiv; M if x free in M</span>}
+   * list is _the_ data structure 
+   * empty list:
+      * `(quote ())`,  ${<code>'()</code>}
+      * ${<code>[]</code>}
+   * constructor
+      * `(cons 1 (cons 2 '())`, `'(1 2)`, `(list 1 2)`
+      * ${<code>[].push(2).push(1)</code>}, ${<code>[1, 2]</code>}
+   * program as data
+      * `'(lambda (x) x)`, `(list 'lambda (list 'x) 'x)`
+   * head
+      * `(car '(1 2))` ${<span>&rArr;</span>} `1`
+      * ${<code>[1, 2][0]</code>}
+   * tail
+      * `(cdr '(1 2))` ${<span>&rArr;</span>} `(2)`
+      * ${<span class="ov"><code>[1, 2].slice(1)</code></span>}
 </MD>   
 </impress.slide>
 
@@ -43,11 +48,27 @@ ${<div class="center">As close as possible to the untyped ${<span>&lambda;</span
 /*---------------------------------------------------------------------*/
 slide.css = <style>
 .body {
-   font-size: 80%;
+   font-size: 70%;
 }
 
-h2 {
-   text-align: center;
+p {
+   margin: 0;
+}
+
+.center {
+   font-weight: bold;
+   color: var(--greydark);
+   font-size: 105%;
+   margin-bottom: 0.5ex;
+}
+
+div.head {
+   text-decoration: underline;
+   margin-left: 0.5em;
+   color: var(--grey);
+   font-weight: bold;
+   font-size: 80%;
+   margin-bottom: 1ex;
 }
 
 strong {
@@ -62,10 +83,10 @@ em {
 
 ul {
    background-color: white;
-   margin: 1ex;
+   margin: 2ex;
    list-style: none;
-   margin-top: 2ex;
-   font-size: 70%;
+   margin-top: 0;
+   font-size: 55%;
 }
 
 ul ul {
@@ -104,15 +125,12 @@ a:after {
    content: ")";
 }
 
-.math {
-   font-family: cms;
-   font-size: 85%;
-   color: var(--greyverydark);
-}
-
 code {
    font-family: cmtt;
    color: var(--greyverydark);
 }
-   
+
+span.ov {
+   text-decoration: line-through;
+}
 </style>   

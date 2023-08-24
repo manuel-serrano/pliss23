@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Thu Aug 24 16:04:25 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 16:54:26 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 slide                                            */
@@ -71,11 +71,19 @@ ul ul {
    font-size: 80%;
 }
 
+ul li:before {
+   color: var(--greydark);
+}
+
 ul ul li:before {
+   color: var(--grey);
+}
+
+ul ul li code {
    color: var(--scheme-color);
 }
 
-ul ul li + li:before {
+ul ul li + li code {
    color: var(--javascript-color);
 }
 
