@@ -1,0 +1,3 @@
+for (let i = 0; i < BOUND; #nooverflow@step4#i++#/nooverflow@step4#) {
+   ...
+}

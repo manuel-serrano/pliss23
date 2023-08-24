@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Tue Aug 22 10:40:28 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 07:43:15 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Loop compilation comparison                                      */
@@ -92,7 +92,7 @@ loop.css = <style>
    font-weight: bold;
 }
 
-em {
+strong {
    font-style: normal;
    color: var(--greydark);
 }
@@ -193,12 +193,25 @@ div.asm {
    right: 2em;
    bottom: 4ex;
    position: absolute;
-   color: var(--grey);
+   width: 80%;
+   position: absolute;
 }
 
 .problem {
-   width: 80%;
-   position: absolute;
+   font-family: SpecialElite;
+   border: 0.4ex solid var(--red);
+   border-radius: 0.4ex;
+   font-weight: bold;
+   transform-origin: left bottom;
+   -webkit-transform-origin: left bottom;
+   font-size: 80%;
+   padding: 0.8ex 0.8ex 0.4ex 0.8ex;
+   background: var(--greydark);
+   color: var(--greyverylight);
+}
+
+.problem em {
+   color: white;
 }
 
 .note {

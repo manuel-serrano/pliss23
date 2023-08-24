@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  manuel serrano                                    */
 /*    Creation    :  Sat Aug 13 15:56:38 2022                          */
-/*    Last change :  Tue Aug 22 10:44:13 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 07:46:49 2023 (serrano)                */
 /*    Copyright   :  2022-23 manuel serrano                            */
 /*    -------------------------------------------------------------    */
 /*    JavaScript Property access                                       */
@@ -96,6 +96,23 @@ img {
    position: absolute;
    color: var(--grey);
    font-weight: bold;
+}
+
+.problem {
+   font-family: SpecialElite;
+   border: 0.4ex solid var(--red);
+   border-radius: 0.4ex;
+   font-weight: bold;
+   transform-origin: left bottom;
+   -webkit-transform-origin: left bottom;
+   font-size: 80%;
+   padding: 0.8ex 0.8ex 0.4ex 0.8ex;
+   background: var(--greydark);
+   color: var(--greyverylight);
+}
+
+.problem em {
+   color: white;
 }
 
 </style>

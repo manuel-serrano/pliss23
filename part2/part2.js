@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 08:46:35 2023                          */
-/*    Last change :  Wed Aug 23 08:18:24 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 07:53:20 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    PLISS23, Part 2                                                  */
@@ -18,5 +18,7 @@ import { nightmare } from "./nightmare/nightmare.js";
 import { variables } from "./variables/variables.js";
 import { ox } from "./ox/ox.js";
 import { proxy } from "./proxy/proxy.js";
+import { arithmetic } from "./arithmetic/arithmetic.js";
 
-export const part2 = [title, nightmare, variables, ox, proxy];
+export const part2 = [title, nightmare, variables, ox, proxy,
+		     arithmetic];
