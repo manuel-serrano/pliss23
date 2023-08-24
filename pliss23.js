@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 12:03:19 2016                          */
-/*    Last change :  Thu Aug 24 09:49:59 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 11:08:44 2023 (serrano)                */
 /*    Copyright   :  2016-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    PLISS23 presentation                                             */
@@ -112,18 +112,18 @@ function slides(width, height) {
       </impress.row>
      
       <impress.row class="row-stack" data-x=0 data-y=${height + 100}>
-         ${part1.title}
+         ${part1}
       </impress.row>
       
-      <impress.row class="row-stack" data-x=0 data-y=${(height + 50) * 2}>>
+      <impress.row class="row-stack" data-x=0 data-y=${(height + 100) * 2}>>
          ${part2}
       </impress.row>
       
-      <impress.row class="row-stack" data-x=0 data-y=${(height + 50) * 3}>>
+      <impress.row class="row-stack" data-x=0 data-y=${(height + 100) * 3}>>
          ${benchmark}
       </impress.row>
       
-      <impress.row class="row-stack" data-x=0 data-y=${(height + 50) * 4}>>
+      <impress.row class="row-stack" data-x=0 data-y=${(height + 100) * 4}>>
          ${calibration}
       </impress.row>
    
@@ -132,7 +132,7 @@ function slides(width, height) {
 
 import { calibration } from "./calibration.js";
 import { title } from "./title.js";
-import * as part1 from "./part1/part1.js";
+import { part1 } from "./part1/part1.js";
 import { part2 } from "./part2/part2.js";
 import { benchmark } from "./benchmark/benchmark.js";
 

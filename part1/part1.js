@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 08:46:35 2023                          */
-/*    Last change :  Tue Aug 22 09:39:59 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 11:16:55 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    PLISS23, Part 1                                                  */
@@ -13,7 +13,9 @@
 /*---------------------------------------------------------------------*/
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
-import * as path from "path";
+import { title } from "./title.js";
+import { primer } from "./primer/primer.js";
 
-export { title } from "./title.js";
-
+export const part1 = [
+   title, primer,
+];

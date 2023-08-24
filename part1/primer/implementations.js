@@ -1,9 +1,9 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/pliss23/part1/title.js                    */
+/*    .../diffusion/talk/pliss23/part1/primer/implementations.js       */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Thu Aug 24 11:06:20 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 11:30:48 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -17,26 +17,25 @@ import * as impress from "hopimpress-0.6.*.hz";
 import { MARKDOWN as MD } from "hop:markdown";
 
 /*---------------------------------------------------------------------*/
-/*    title ...                                                        */
+/*    A slide ...                                                      */
 /*---------------------------------------------------------------------*/
-export const title = <impress.slide title="part1" id="part1-title" class="md">
+export const slide = <impress.slide title="Implementations" class="md">
    <MD>
-Scheme (70s), a tiny Lisp
-=========================
+Implementations
+===============
 
-   * a **functional programming** language
-   * **strict**, full polymorphism
-   * based on a **tiny core**
-   * a dynamically typed ML
-   * gave birth to JavaScript
-   * _Structure and Interpretation of Computer Programs_
+   * Guile [https://www.gnu.org/software/guile](https://www.gnu.org/software/guile/)
+   * Racket [https://racket-lang.org](https://racket-lang.org)
+   * Gambit [http://gambitscheme.org](http://gambitscheme.org/)
+   * Bigloo [http://www-sop.inria.fr/indes/fp/Bigloo](http://www-sop.inria.fr/indes/fp/Bigloo/)
+   * ...
 </MD>   
 </impress.slide>
 
 /*---------------------------------------------------------------------*/
 /*    style                                                            */
 /*---------------------------------------------------------------------*/
-title.css = <style>
+slide.css = <style>
 .body {
    font-size: 80%;
 }
@@ -56,5 +55,20 @@ ul {
    margin: 1ex;
    list-style: none;
    margin-top: 2ex;
+   font-size: 95%;
+}
+
+a {
+   text-decoration: none;
+   color: var(--greydark);
+   font-size: 60%;
+   font-family: monospace;
+}
+	       
+a:before {
+   content: "(";
+}
+a:after {
+   content: ")";
 }
 </style>   

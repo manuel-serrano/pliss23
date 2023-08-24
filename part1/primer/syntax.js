@@ -1,9 +1,9 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/pliss23/part1/title.js                    */
+/*    serrano/diffusion/talk/pliss23/part1/primer/syntax.js            */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Thu Aug 24 11:06:20 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 15:54:10 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -17,28 +17,37 @@ import * as impress from "hopimpress-0.6.*.hz";
 import { MARKDOWN as MD } from "hop:markdown";
 
 /*---------------------------------------------------------------------*/
-/*    title ...                                                        */
+/*    A slide ...                                                      */
 /*---------------------------------------------------------------------*/
-export const title = <impress.slide title="part1" id="part1-title" class="md">
+export const slide = <impress.slide title="Syntax" class="md">
    <MD>
-Scheme (70s), a tiny Lisp
-=========================
+A weird syntax (but it is only syntax)
+======================================
 
-   * a **functional programming** language
-   * **strict**, full polymorphism
-   * based on a **tiny core**
-   * a dynamically typed ML
-   * gave birth to JavaScript
-   * _Structure and Interpretation of Computer Programs_
+${<div class="center">As close as possible to the untyped ${<span>&lambda;</span>}-calculus</div>}
+
+   * abstraction: ${<span class="math">&lambda;x.M</span>}
+      * `(lambda (x) M)`
+      * `x => M`
+   * application: ${<span class="math">(M N)</span>}
+      * `(M N)`
+      * `M(N)`
+   * alpha-conversion: ${<span class="math">&lambda;x.M[x] &equiv; &lambda;y.M[y]</span>}
+   * beta-reduction: ${<span class="math">((&lambda;x.M) E) &equiv; (M[x := E])</span>}
+   * eta-conversion: ${<span class="math">((&lambda;x.M x) E) &equiv; M if x free in M</span>}
 </MD>   
 </impress.slide>
 
 /*---------------------------------------------------------------------*/
 /*    style                                                            */
 /*---------------------------------------------------------------------*/
-title.css = <style>
+slide.css = <style>
 .body {
    font-size: 80%;
+}
+
+h2 {
+   text-align: center;
 }
 
 strong {
@@ -56,5 +65,46 @@ ul {
    margin: 1ex;
    list-style: none;
    margin-top: 2ex;
+   font-size: 70%;
 }
+
+ul ul {
+   margin: 0;
+   font-size: 80%;
+}
+
+ul ul li:before {
+   color: var(--scheme-color);
+}
+
+ul ul li + li:before {
+   color: var(--javascript-color);
+}
+
+a {
+   text-decoration: none;
+   color: var(--greydark);
+   font-size: 60%;
+   font-family: monospace;
+}
+	       
+a:before {
+   content: "(";
+}
+
+a:after {
+   content: ")";
+}
+
+.math {
+   font-family: cms;
+   font-size: 85%;
+   color: var(--greyverydark);
+}
+
+code {
+   font-family: cmtt;
+   color: var(--greyverydark);
+}
+   
 </style>   
