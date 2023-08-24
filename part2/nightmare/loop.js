@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Thu Aug 24 07:43:15 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 08:35:24 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Loop compilation comparison                                      */
@@ -69,7 +69,7 @@ const loop = <impress.slide title="loop" class="javascript">
    </div>
   
    <div class="syntaxtells problem center" step="9">
-    The JavaScript syntax tells <em>very little</em> about the data structures
+    The JavaScript <em>syntax</em> tells very little about the <em>data structures</em>
    </div>
   
    <div step="5" class="note" id="note1">a : <span class="type">array</span></div>
@@ -212,6 +212,7 @@ div.asm {
 
 .problem em {
    color: white;
+   font-style: normal;
 }
 
 .note {

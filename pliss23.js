@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 12:03:19 2016                          */
-/*    Last change :  Tue Aug 22 11:26:08 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 09:49:59 2023 (serrano)                */
 /*    Copyright   :  2016-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    PLISS23 presentation                                             */
@@ -115,15 +115,25 @@ function slides(width, height) {
          ${part1.title}
       </impress.row>
       
-      <impress.row class="row-stack" data-x=0 data-y=${height * 2 + 100}>>
+      <impress.row class="row-stack" data-x=0 data-y=${(height + 50) * 2}>>
          ${part2}
       </impress.row>
       
+      <impress.row class="row-stack" data-x=0 data-y=${(height + 50) * 3}>>
+         ${benchmark}
+      </impress.row>
+      
+      <impress.row class="row-stack" data-x=0 data-y=${(height + 50) * 4}>>
+         ${calibration}
+      </impress.row>
+   
    </impress.impress>
 }
 
+import { calibration } from "./calibration.js";
 import { title } from "./title.js";
 import * as part1 from "./part1/part1.js";
 import { part2 } from "./part2/part2.js";
+import { benchmark } from "./benchmark/benchmark.js";
 
 console.log(`"http://localhost:${hop.port}/hop/pliss23" ready...`);

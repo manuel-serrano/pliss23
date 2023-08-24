@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Tue Aug 22 09:41:23 2023 (serrano)                */
+/*    Last change :  Thu Aug 24 09:49:18 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23 title                                                    */
@@ -17,12 +17,10 @@ import * as path from "path";
 import { inriaSVG } from "./config.js";
 import * as impress from "hopimpress-0.6.*.hz";
 
-export { title };
-
 /*---------------------------------------------------------------------*/
 /*    title ...                                                        */
 /*---------------------------------------------------------------------*/
-const title = <impress.slide title="title" onslideenter=~{rm("partZoomTop"); rm("partZoomBottom")}>
+export const title = <impress.slide title="title" onslideenter=~{rm("partZoomTop"); rm("partZoomBottom")}>
    <script>
    function rm(clazz) {
       const els = document.getElementsByClassName(clazz);

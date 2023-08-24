@@ -1,10 +1,10 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/ecoop22/listings.js                       */
+/*    serrano/diffusion/talk/pliss23/listings.js                       */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Sat Nov 14 08:32:31 2015                          */
-/*    Last change :  Thu Jun  2 07:31:10 2022 (serrano)                */
-/*    Copyright   :  2015-22 Manuel Serrano                            */
+/*    Last change :  Thu Aug 24 10:20:30 2023 (serrano)                */
+/*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Listings                                                         */
 /*=====================================================================*/
@@ -17,6 +17,11 @@ import * as md from "hop:markdown";
 import * as fontifier from "hop:fontifier";
 
 export { LSTINPUTLISTING };
+
+/*---------------------------------------------------------------------*/
+/*    listingcnt ...                                                   */
+/*---------------------------------------------------------------------*/
+let listingcnt = 0;
 
 /*---------------------------------------------------------------------*/
 /*    range ...                                                        */
@@ -38,6 +43,7 @@ function LSTINPUTLISTING(attrs, ...nodes) {
    const lang = attrs.language ? fontifier[attrs.language] : fontifier.hopscript;
    const ip = #:open-input-file(#:js-tostring(path, #:%this));
    const clazz = attrs.class ? attrs.class + " listings" : (attrs.language ? attrs.language + " listings" : "listings");
+   const id = attrs.id ? attrs.id : "listing" + listingcnt++;
 
    if (!ip) {
       throw new Error('Cannot find file "' + path + '"');
@@ -45,9 +51,9 @@ function LSTINPUTLISTING(attrs, ...nodes) {
 
    try {
       if (!attrs.linerange) {
-      	 return <PRE class=${clazz} step=${attrs.step}><CODE class="fontifier-prog">${lang(ip, undefined, undefined)}</CODE>${nodes}</PRE>;
+      	 return <PRE id=${id} class=${clazz} step=${attrs.step}><CODE class="fontifier-prog">${lang(ip, undefined, undefined)}</CODE>${nodes}</PRE>;
       } else {
- 	 return <PRE class=${clazz} step=${attrs.step}><CODE class="fontifier-prog">${range(attrs.linerange).map(({beg, end}) => lang(ip, beg, end))}</CODE>${nodes}</PRE>;
+ 	 return <PRE id=${id} class=${clazz} step=${attrs.step}><CODE class="fontifier-prog">${range(attrs.linerange).map(({beg, end}) => lang(ip, beg, end))}</CODE>${nodes}</PRE>;
       }
    } finally {
       #:close-input-port(ip);
