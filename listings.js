@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Sat Nov 14 08:32:31 2015                          */
-/*    Last change :  Fri Aug 25 10:02:46 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 11:58:25 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Listings                                                         */
@@ -68,7 +68,7 @@ function LSTLISTING(attrs, ...nodes) {
    const clazz = attrs.class ? attrs.class + " listings" : (attrs.language ? attrs.language + " listings" : "listings");
    const id = attrs.id ? attrs.id : "listing" + listingcnt++;
    const str = String.prototype.concat.apply("",nodes);
-   const ip = #:open-input-string(#:js-tostring(str.substring(1, str.length - 1), #:%this));
+   const ip = #:open-input-string(#:js-tostring(str.trim(), #:%this));
    
    try {
       return <PRE id=${id} class=${clazz} step=${attrs.step}><CODE class="fontifier-prog">${lang(ip, undefined, undefined)}</CODE></PRE>;
