@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Sat Nov 14 08:32:31 2015                          */
-/*    Last change :  Thu Aug 24 10:20:30 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 10:02:46 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Listings                                                         */
@@ -16,7 +16,7 @@
 import * as md from "hop:markdown";
 import * as fontifier from "hop:fontifier";
 
-export { LSTINPUTLISTING };
+export { LSTINPUTLISTING, LSTLISTING };
 
 /*---------------------------------------------------------------------*/
 /*    listingcnt ...                                                   */
@@ -39,11 +39,11 @@ function range(linerange) {
 /*    LSTINPUTLISTING ...                                              */
 /*---------------------------------------------------------------------*/
 function LSTINPUTLISTING(attrs, ...nodes) {
-   const path = attrs.src;
    const lang = attrs.language ? fontifier[attrs.language] : fontifier.hopscript;
-   const ip = #:open-input-file(#:js-tostring(path, #:%this));
    const clazz = attrs.class ? attrs.class + " listings" : (attrs.language ? attrs.language + " listings" : "listings");
    const id = attrs.id ? attrs.id : "listing" + listingcnt++;
+   const path = attrs.src;
+   const ip = #:open-input-file(#:js-tostring(path, #:%this));
 
    if (!ip) {
       throw new Error('Cannot find file "' + path + '"');
@@ -61,22 +61,18 @@ function LSTINPUTLISTING(attrs, ...nodes) {
 }
 
 /*---------------------------------------------------------------------*/
-/*    include ...                                                      */
+/*    LSTLISTING ...                                                   */
 /*---------------------------------------------------------------------*/
-export function include( path, lang = undefined, beg = undefined, end = undefined ) {
-   const ip = #:open-input-file( #:js-tostring( path, #:%this ) );
+function LSTLISTING(attrs, ...nodes) {
+   const lang = attrs.language ? fontifier[attrs.language] : fontifier.hopscript;
+   const clazz = attrs.class ? attrs.class + " listings" : (attrs.language ? attrs.language + " listings" : "listings");
+   const id = attrs.id ? attrs.id : "listing" + listingcnt++;
+   const str = String.prototype.concat.apply("",nodes);
+   const ip = #:open-input-string(#:js-tostring(str.substring(1, str.length - 1), #:%this));
    
-   if( !ip ) {
-      throw new Error( 'Cannot find file "' + path + '"' );
-   }
-
-   if( lang == undefined ) {
-      lang = fontifier.hopscript;
-   }
-
    try {
-      return <md.PRE><md.CODE class="fontifier-prog">${lang( ip, beg, end )}</md.CODE></md.PRE>
+      return <PRE id=${id} class=${clazz} step=${attrs.step}><CODE class="fontifier-prog">${lang(ip, undefined, undefined)}</CODE></PRE>;
    } finally {
-      #:close-input-port( ip );
+      #:close-input-port(ip);
    }
 }
