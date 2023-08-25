@@ -1,12 +1,12 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/pliss23/part1/scm2c/fixnum.js             */
+/*    serrano/diffusion/talk/pliss23/part1/scm2c/nontail.js            */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 11:59:35 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 12:37:47 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
-/*    Pliss23, Scheme compilation                                      */
+/*    Pliss23, part 1 title                                            */
 /*=====================================================================*/
 "use hopscript";
 
@@ -16,42 +16,58 @@
 import * as impress from "hopimpress-0.6.*.hz";
 import * as fontifier from "hop:fontifier";
 import { MARKDOWN as MD } from "hop:markdown";
+import { LSTLISTING } from "../../listings.js";
 
 /*---------------------------------------------------------------------*/
 /*    A slide ...                                                      */
 /*---------------------------------------------------------------------*/
-export const slide = <impress.slide title="Fixnums" class="md">
-   <MD fontifier=${fontifier}>
-   ${<div class="center">Fixnums</div>}
+export const slide = <impress.slide title="Non tail calls">
+<div class="center">What about this one?</div>
 
+<lstlisting language="scheme">
+(define (copy o)
+   (define (copy-vec)
+      (let ((r (make-vector (vector-length o))))
+         (let loop ((i (-fx (vector-length o) 1)))
+          (if (${"<"}fx i 0)
+                r
+                (begin
+                   (vector-set! r i (vector-ref o i))
+                   (loop (-f xi 1)))))))
+   (define (copy-pair)
+      (let loop ((o o))
+         (if (null? o)
+             o
+             (cons (car o) (loop (cdr o))))))
+   (if (vector? o)
+       (copy-vec)
+       (copy-pair)))
+</lstlisting>
 
-```c
-#define FXP(n) n->header == FIXNUM
-#define FXVAL(n) n->val.fixnum
-
-obj_t makefx(long n) {
-  obj_t num = GC_MALLOC(sizeof(struct box));
-  num->header = FIXNUM;
-  num->val.fixnum = n;
-  return num;
+   <div class="center" step="1-">Non-tail calls</div>
+   
+<div step="2">
+   <lstlisting language="c">
+obj_t copy(obj_t o) {
+  if (VECTORP(o)) {
+    goto copy_vec;
+  } else {
+    goto copy_pair;
+  }
+  
+copy_pair:  
+  return copy_pair_loop(o);
 }
 
-obj_t addfx(obj_t n, obj_t m) {
-  if (!FXP(n) || !FXP(m)) {
-    throw("add: bad number");
+obj_t copy_pair_loop(obj_t o) {
+  if (nullp(o)) {
+    return o;
   } else {
-     long res;
-
-     if (__builtin_saddl_overflow(FXVAL(n), FXVAL(m), &res)) {
-        return addbx(fx_to_bx(FXVAL(n)), fx_to_bx(FXVAL(m)));
-     } else {
-        return makefx(res);
-     }
+    return cons(CAR(o), copy_pair_loop(CDR(o)));
   }
 }
-```
-
-</MD>   
+</lstlisting>
+   </div>
 </impress.slide>
 
 /*---------------------------------------------------------------------*/
@@ -59,12 +75,16 @@ obj_t addfx(obj_t n, obj_t m) {
 /*---------------------------------------------------------------------*/
 slide.css = <style>
 .body {
-   font-size: 80%;
+   font-size: 65%;
    transition: 1s all;
 }
 
+div[data-step="2"] {
+   top: -19ex;
+}
+
 pre {
-   font-size: 30%;
+   font-size: 45%;
 }
 
 p {
@@ -74,10 +94,14 @@ p {
 .center {
    font-weight: bold;
    color: var(--greydark);
-   font-size: 110%;
-   margin-bottom: 1ex;
+   font-size: 105%;
+   margin-bottom: 0.5ex;
 }
 
+.center[step="1-"] {
+   color: var(--red);
+}
+  
 div.head {
    text-decoration: underline;
    margin-left: 0.5em;
@@ -97,33 +121,6 @@ em {
    color: var(--greydark);
 }
 
-ul {
-   margin: 1ex;
-   list-style: none;
-   margin-top: 0;
-   font-size: 90%;
-}
-
-ul ul {
-   margin: 0;
-   font-size: 80%;
-}
-
-a {
-   text-decoration: none;
-   color: var(--greydark);
-   font-size: 60%;
-   font-family: monospace;
-}
-	       
-a:before {
-   content: "(";
-}
-
-a:after {
-   content: ")";
-}
-
 code {
    font-family: cmtt;
    color: var(--greyverydark);
@@ -135,19 +132,4 @@ code {
    font-style: normal;
 }
       
-[data-step="0"] li { opacity: 0; }
-
-[data-step="1"] li { opacity: 1;}
-[data-step="1"] li + li { opacity: 0; }
-
-[data-step="2"] li { opacity: 1; text-decoration: line-through; }
-[data-step="2"] li + li { opacity: 1; text-decoration: none; }
-[data-step="2"] li + li + li { opacity: 0; }
-
-[data-step="3"] li { opacity: 1; text-decoration: line-through; }
-[data-step="3"] li + li { opacity: 1; text-decoration: line-through; }
-[data-step="3"] li + li + li { opacity: 1; text-decoration: none; }
-[data-step="3"] li + li + li + li { opacity: 0; }
-
-[data-step="4"] li { opacity: 1; text-decoration: line-through; }
 </style>   

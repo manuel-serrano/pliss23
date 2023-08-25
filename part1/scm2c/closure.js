@@ -1,9 +1,9 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/pliss23/part1/scm2c/fixnum.js             */
+/*    serrano/diffusion/talk/pliss23/part1/scm2c/closure.js            */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 11:59:35 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 12:04:08 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, Scheme compilation                                      */
@@ -20,34 +20,37 @@ import { MARKDOWN as MD } from "hop:markdown";
 /*---------------------------------------------------------------------*/
 /*    A slide ...                                                      */
 /*---------------------------------------------------------------------*/
-export const slide = <impress.slide title="Fixnums" class="md">
+export const slide = <impress.slide title="Closures" class="md">
    <MD fontifier=${fontifier}>
-   ${<div class="center">Fixnums</div>}
+   ${<div class="center">Closures</div>}
 
 
 ```c
-#define FXP(n) n->header == FIXNUM
-#define FXVAL(n) n->val.fixnum
-
-obj_t makefx(long n) {
-  obj_t num = GC_MALLOC(sizeof(struct box));
-  num->header = FIXNUM;
-  num->val.fixnum = n;
-  return num;
+struct _function {
+  long arity;
+  obj_t (*entry)();
+  obj_t env0;
 }
 
-obj_t addfx(obj_t n, obj_t m) {
-  if (!FXP(n) || !FXP(m)) {
-    throw("add: bad number");
-  } else {
-     long res;
+#define CLOSURE_ENV(clo, i) ((obj_t *)&(c->val.function.env0))[i]
 
-     if (__builtin_saddl_overflow(FXVAL(n), FXVAL(m), &res)) {
-        return addbx(fx_to_bx(FXVAL(n)), fx_to_bx(FXVAL(m)));
-     } else {
-        return makefx(res);
-     }
-  }
+obj_t make_closure(obj_t (*entry)(), long arity, long size) {
+  obj_t c = GC_MALLOC(sizeof(enum types) + sizeof(struct _function) + sizeof(obj_t) * (size - 1));
+  c->header = FUNCTION;
+  c->val.function.arity = arity;
+  c->val.function.entry = entry;
+  return c;
+}
+
+obj_t adder(obj_t x) {
+  obj_t c = make_closure(&lambda0, 1, 1);
+  CLOSURE_ENV(c, 0) = x;
+  return x;  
+}
+
+obj_t lambda0(obj_t clo, obj_t y) {
+  obj_t x = CLOSURE_ENV(clo, 0);
+  return add(x, y);
 }
 ```
 

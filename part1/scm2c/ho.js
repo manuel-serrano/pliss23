@@ -3,10 +3,10 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 11:57:13 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 11:59:36 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
-/*    Pliss23, part 1 title                                            */
+/*    Pliss23, Scheme compilation                                      */
 /*=====================================================================*/
 "use hopscript";
 
