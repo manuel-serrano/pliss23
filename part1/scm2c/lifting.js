@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 12:52:57 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 12:55:20 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -37,14 +37,14 @@ export const slide = <impress.slide title="Lambda Lifting">
 <div step="1">
    <lstlisting language="c">
 obj_t F(obj_t n, obj_t m) {
-  obj_t b = make_closure(&lambdaB, 0, 2);
+  obj_t B = make_closure(&lambdaB, 0, 2);
   CLOSURE_ENV(b, 0) = n;
   CLOSURE_ENV(b, 1) = m;
-  return b;
+  return B;
 }
 
 obj_t lambdaB(obj_t env) {
-  return a(CLOSURE_ENV(env, 0)) + CLOSURE_ENV(env, 1);
+  return functionA(CLOSURE_ENV(env, 0)) + CLOSURE_ENV(env, 1);
 }
 
 obj_t functionA(obj_t n) {
