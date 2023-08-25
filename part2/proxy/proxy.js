@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:24:33 2023                          */
-/*    Last change :  Wed Aug 23 17:52:00 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 08:29:23 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    JavaScript O["X"]                                                */
@@ -39,7 +39,7 @@ import { benchmark } from "./benchmark.js";
 /*    proxy                                                            */
 /*---------------------------------------------------------------------*/
 export const proxy = [
-   <chapter number="4" title=${<span class="title">o[<span class="important">"x"</span>]</span>}>
+   <chapter number="4" title=${<span class="care">proxy</span>}>
       dynamic properties, proxy objects
       <div class="author">(with Robby Findler)</div>
    </chapter>,

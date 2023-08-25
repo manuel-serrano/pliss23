@@ -1,10 +1,10 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/strangeloop22/benchmark/bench.js          */
+/*    serrano/diffusion/talk/pliss23/benchmark/bench.js                */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Fri May 28 13:13:47 2021                          */
-/*    Last change :  Wed Aug 17 16:10:08 2022 (serrano)                */
-/*    Copyright   :  2021-22 Manuel Serrano                            */
+/*    Last change :  Fri Aug 25 08:32:47 2023 (serrano)                */
+/*    Copyright   :  2021-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    JavaScript benchmark                                             */
 /*=====================================================================*/
@@ -20,7 +20,7 @@ export { bench };
 /*---------------------------------------------------------------------*/
 /*    bench ...                                                        */
 /*---------------------------------------------------------------------*/
-const bench = <impress.slide title="== Benchmark ==" class="benchmark">
+const bench = <impress.slide title=${<span class="important">Benchmark</span>} class="benchmark">
    <div class="benchmark">
      <div class="hr" id="line1">&nbsp;</div>
      <div class="hr" id="line2">&nbsp;</div>

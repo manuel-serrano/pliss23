@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Thu Aug 24 11:06:20 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 08:25:16 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -19,7 +19,7 @@ import { MARKDOWN as MD } from "hop:markdown";
 /*---------------------------------------------------------------------*/
 /*    title ...                                                        */
 /*---------------------------------------------------------------------*/
-export const title = <impress.slide title="part1" id="part1-title" class="md">
+export const title = <impress.slide title=${<span class="important">part 1: Scheme</span>} id="part1-title" class="md">
    <MD>
 Scheme (70s), a tiny Lisp
 =========================

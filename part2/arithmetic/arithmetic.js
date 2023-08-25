@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  manuel serrano                                    */
 /*    Creation    :  Sat Aug 13 15:56:38 2022                          */
-/*    Last change :  Thu Aug 24 08:12:35 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 08:30:34 2023 (serrano)                */
 /*    Copyright   :  2022-23 manuel serrano                            */
 /*    -------------------------------------------------------------    */
 /*    JavaScript Arithmetic                                            */
@@ -100,7 +100,7 @@ const style = <style>
 /*    implementation ...                                               */
 /*---------------------------------------------------------------------*/
 export const arithmetic = [
-   <chapter number="5" title="Arithmetic"></chapter>,
+   <chapter number="5" title=${<span class="care">Arithmetic</span>}></chapter>,
    style, numbers, ieee754, allfloats, nantagging, boxsmi, boxint53, 
    benchnum, quiz2, quiz1
 ];

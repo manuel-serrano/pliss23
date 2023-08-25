@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Thu Aug 24 16:54:41 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 09:00:27 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -19,7 +19,7 @@ import { MARKDOWN as MD } from "hop:markdown";
 /*---------------------------------------------------------------------*/
 /*    A slide ...                                                      */
 /*---------------------------------------------------------------------*/
-export const slide = <impress.slide title="Expression based" class="md">
+export const slide = <impress.slide title="Beauty" class="md">
    <MD>
    ${<div class="center">The (pure) beauty of Scheme</div>}
 

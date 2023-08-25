@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  manuel serrano                                    */
 /*    Creation    :  Sat Aug 13 15:56:38 2022                          */
-/*    Last change :  Thu Aug 24 08:47:29 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 08:31:12 2023 (serrano)                */
 /*    Copyright   :  2022-23 manuel serrano                            */
 /*    -------------------------------------------------------------    */
 /*    JavaScript AOT compilation                                       */
@@ -185,7 +185,7 @@ const hintStyle = <style>
 /*    aot ...                                                          */
 /*---------------------------------------------------------------------*/
 export const aot = [
-   <chapter number="6" title="AOT">
+   <chapter number="6" title=${<span class="care">AOT</span>}>
       Ahead-of-Time compilation
    </chapter>,
    style, mathStyle, hintStyle,

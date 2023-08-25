@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 10:12:59 2023                          */
-/*    Last change :  Wed Aug 23 08:14:14 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 08:49:27 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    Chapter                                                          */
@@ -42,3 +42,6 @@
   color: var(--grey);
 }
 
+.chapter .care  {
+    color: var(--greydark);
+}

@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Tue Aug 22 09:47:26 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 08:25:50 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23 par 2 title                                              */
@@ -23,7 +23,7 @@ export { title };
 /*---------------------------------------------------------------------*/
 /*    title ...                                                        */
 /*---------------------------------------------------------------------*/
-const title = <impress.slide title="part2" id="part2-title" class="md">
+const title = <impress.slide title=${<span class="important">part 2: JavaScript</span>} id="part2-title" class="md">
    <MD>
 JavaScript
 ==========

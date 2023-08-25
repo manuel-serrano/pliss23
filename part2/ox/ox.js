@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:24:33 2023                          */
-/*    Last change :  Wed Aug 23 08:15:44 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 08:28:23 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    JavaScript O.X                                                   */
@@ -28,7 +28,7 @@ import { poly } from "./poly.js";
 /*    ox                                                               */
 /*---------------------------------------------------------------------*/
 export const ox = [
-   <chapter number="3" title="o.x">
+   <chapter number="3" title=${<span class="care">o.x</span>}>
       hidden classes, inline caches
       <div class="author">(with Marc Feeley)</div>
    </chapter>,

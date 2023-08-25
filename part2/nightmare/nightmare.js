@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 10:08:53 2023                          */
-/*    Last change :  Tue Aug 22 11:39:35 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 08:26:37 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    JS a nightmare for compilers                                     */
@@ -24,7 +24,7 @@ import { miscJS } from "./misc.js";
 /*    nightmare                                                        */
 /*---------------------------------------------------------------------*/
 export const nightmare = [
-   <chapter number="1" title="JavaScript">
+   <chapter number="1" title=${<span class="care">Nightmare</span>}>
       A nightmare for compilers
    </chapter>,
    loop, oxC, oxJS, funcallC, funcallJS, miscJS
