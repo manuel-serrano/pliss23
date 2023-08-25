@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 10:08:53 2023                          */
-/*    Last change :  Fri Aug 25 10:28:28 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 11:49:41 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    Scheme primer                                                    */
@@ -21,11 +21,14 @@ import { slide as slowfixnum } from "./slowfixnum.js";
 import { slide as specialization } from "./specialization.js";
 import { slide as fx } from "./fx.js";
 import { slide as bib } from "./bib.js";
+import { slide as ho } from "./ho.js";
 
 /*---------------------------------------------------------------------*/
 /*    scm2c                                                            */
 /*---------------------------------------------------------------------*/
 export const scm2c = [
    <chapter number="2" title=${<span class="care">Scheme->C</span>}/>,
-   challenges, polymorphism, boxing, fixnum, slowfixnum, specialization, fx, bib
+   challenges,
+   polymorphism, boxing, fixnum, slowfixnum, specialization, fx, bib
+   ho
 ];
