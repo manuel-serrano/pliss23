@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:36:34 2023                          */
-/*    Last change :  Wed Aug 23 08:20:56 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 08:12:53 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    A slide                                                          */
@@ -96,7 +96,7 @@ pre {
    bottom: 0;
 }		 
 
-   .downarrow {
+.downarrow {
   color: var(--javascript-color);
   position: relative;
   left: 1em;

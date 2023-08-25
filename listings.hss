@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  manuel serrano                                    */
 /*    Creation    :  Tue May 24 09:02:20 2022                          */
-/*    Last change :  Tue Aug 22 15:41:19 2023 (serrano)                */
+/*    Last change :  Fri Aug 25 07:38:29 2023 (serrano)                */
 /*    Copyright   :  2022-23 manuel serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Listing configuration                                            */
@@ -12,7 +12,7 @@
 /*---------------------------------------------------------------------*/
 /*    listings ...                                                     */
 /*---------------------------------------------------------------------*/
-.listings {
+hopimpress-slide.md pre, .listings {
     font-size: var(--listingFontSize);
     font-family: CourierMono;
     width: 95%;
@@ -27,7 +27,7 @@
     color: black;
 }
 
-.listings {
+hopimpress-slide.md pre, .listings {
     border-top: 6px solid;
 }
 
@@ -47,7 +47,7 @@ pre.asm {
     border-top-color: var(--asm-color);
 }
 
-pre.scheme {
+hopimpress-slide.md pre.scheme, pre.scheme {
     border-top-color: var(--scheme-color);
 }
 
