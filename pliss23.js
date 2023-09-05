@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 12:03:19 2016                          */
-/*    Last change :  Thu Aug 24 11:08:44 2023 (serrano)                */
+/*    Last change :  Tue Sep  5 22:34:49 2023 (serrano)                */
 /*    Copyright   :  2016-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    PLISS23 presentation                                             */
@@ -137,3 +137,4 @@ import { part2 } from "./part2/part2.js";
 import { benchmark } from "./benchmark/benchmark.js";
 
 console.log(`"http://localhost:${hop.port}/hop/pliss23" ready...`);
+console.log(`"http://localhost:${hop.port}/hop/hopimpress/remote" ready...`);

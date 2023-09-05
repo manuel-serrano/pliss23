@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Fri May 28 13:13:47 2021                          */
-/*    Last change :  Thu Aug 24 09:04:15 2023 (serrano)                */
+/*    Last change :  Tue Sep  5 22:44:45 2023 (serrano)                */
 /*    Copyright   :  2021-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Optimistic compilation                                           */
@@ -65,7 +65,7 @@ optimistic.css = <style>
 
 .fib pre {
    width: 13.5em;
-   height: 26ex;
+   height: 28ex;
 }
 
 .title {

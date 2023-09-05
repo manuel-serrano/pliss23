@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 10:42:10 2023 (serrano)                */
+/*    Last change :  Tue Sep  5 22:34:21 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -26,7 +26,7 @@ export const slide = <impress.slide title="polymorphism" class="md">
 
 
    * `long id(long x) { return x; }`
-   * `void *id(void *x) { return x; }`
+   * ${<code>void *id(void *x) { return x; }</code>}
    * `#define id(x) x`
 
    ${<div class="center" step="4">Code alone is not enough</div>}

@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Fri May 28 13:13:47 2021                          */
-/*    Last change :  Thu Aug 24 09:59:50 2023 (serrano)                */
+/*    Last change :  Tue Sep  5 22:48:48 2023 (serrano)                */
 /*    Copyright   :  2021-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Scheme closure                                                   */
@@ -31,8 +31,6 @@ export const scmclo = <impress.slide title="Scheme closures" class="aot">
        <svg:img prefix=${false} width="100%" src=${require.resolve( "./svg/clos.svg" )}/>
      </div>
    </div>
-   <impress.arrow class="arrowscheme" step="1" delay-step="1" delay="1100"
-      src="CTOR" dst="CTORsvg" srcanchor="mr" dstanchor="ml"/>
 </impress.slide>;
 	 
 /*---------------------------------------------------------------------*/
