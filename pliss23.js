@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 12:03:19 2016                          */
-/*    Last change :  Tue Sep  5 22:34:49 2023 (serrano)                */
+/*    Last change :  Thu Sep  7 09:20:24 2023 (serrano)                */
 /*    Copyright   :  2016-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    PLISS23 presentation                                             */
@@ -15,15 +15,21 @@
 /*---------------------------------------------------------------------*/
 import { name, slideWidth, slideHeight, impress as impressv } from "./config.js";
 
+//import { serverAliases } from "hop:config";
 import * as fontifier from "hop:fontifier";
 import * as path from "path";
 import * as impress from "hopimpress-0.6.*.hz";
+import { QRCODE } from "./qrcode.js";
 
 /*---------------------------------------------------------------------*/
 /*    pliss23 ...                                                      */
 /*---------------------------------------------------------------------*/
 service pliss23(o) {
-   var s = slides(slideWidth, slideHeight);
+   const s = slides(slideWidth, slideHeight);
+
+   const host = "192.168.141.69"
+   const url = `http://${host}:${hop.port}/hop/hopimpress/remote`;
+   
    var svc = service(id) {
       hop.broadcast("hopimpress", { goto: id });
    };
@@ -34,8 +40,11 @@ service pliss23(o) {
 	   include="hop-window"
            title=${name}
 	   idiom="scheme"
-	   jscript=${[impress.jscript]}/>
+           jscript=${[impress.jscript]}/>
 
+     <script type="module">
+      import { qrcode } from ${require.resolve("./qrcode.js")}
+     </script>
      <impress.cover title=${name} src=${pliss23slides}>
        <ol>
 	 ${ impress.slideNodes(s)
@@ -47,7 +56,12 @@ service pliss23(o) {
 	    } )
 	  }
        </ol>
-     </impress.cover>
+      </impress.cover>
+
+      <div id="qrcode">
+       <qrcode data=${url} pixelSize=6/>
+       <div><tt>${url}</tt></div>
+     </div>
    </impress.html>;
 }
 

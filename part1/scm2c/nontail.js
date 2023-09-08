@@ -29,7 +29,7 @@ export const slide = <impress.slide title="Non tail calls">
    (define (copy-vec)
       (let ((r (make-vector (vector-length o))))
          (let loop ((i (-fx (vector-length o) 1)))
-          (if (${"<"}fx i 0)
+            (if (${"<"}fx i 0)
                 r
                 (begin
                    (vector-set! r i (vector-ref o i))

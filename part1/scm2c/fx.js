@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 11:15:44 2023 (serrano)                */
+/*    Last change :  Wed Sep  6 08:43:22 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -20,7 +20,7 @@ import { MARKDOWN as MD } from "hop:markdown";
 /*---------------------------------------------------------------------*/
 /*    A slide ...                                                      */
 /*---------------------------------------------------------------------*/
-export const slide = <impress.slide title="Fixnums" class="md">
+export const slide = <impress.slide title="Tagging Fixnums, a case study " class="md">
    <MD fontifier=${fontifier}>
    ${<div class="center">Fixnums</div>}
 
@@ -31,7 +31,9 @@ export const slide = <impress.slide title="Fixnums" class="md">
 #define FXP(o) ((o & 7) == 0)
 #define ADDFX(n, m) (n+m)
 
-#definne FLONUMP(o) (((o & 7) == 1) && o-${">"}header == FLONUM)
+#define FLP(o) (((o & 7) == 1) && (o ${">>"} 3)-${">"}header == FLONUM)
+// or, if you play with bit patterns...
+#define FLP(o) ((o & 7) == 2)
 ```
 
 </MD>   

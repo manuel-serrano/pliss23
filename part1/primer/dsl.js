@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 08:52:32 2023 (serrano)                */
+/*    Last change :  Wed Sep  6 08:23:52 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -30,7 +30,7 @@ export const slide = <impress.slide title="Compiler DSL" class="md">
 
 (define (comp n)
    `(lambda (x) (+ x ,n)))
-;; const comp = n => `x => x ${"$"}{n}`
+;; const comp = n => `x => x + ${"$"}{n}`
 ```
 
 Eval evil...

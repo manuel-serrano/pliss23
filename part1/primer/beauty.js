@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 09:00:27 2023 (serrano)                */
+/*    Last change :  Wed Sep  6 08:13:34 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -23,7 +23,7 @@ export const slide = <impress.slide title="Beauty" class="md">
    <MD>
    ${<div class="center">The (pure) beauty of Scheme</div>}
 
-${<div class="head">programs &equiv; data</div>}
+${<div class="head center">program &equiv; data</div>}
 
    * list is _the_ data structure 
    * empty list:
@@ -32,14 +32,14 @@ ${<div class="head">programs &equiv; data</div>}
    * constructor
       * `(cons 1 (cons 2 '())`, `'(1 2)`, `(list 1 2)`
       * ${<code>[].push(2).push(1)</code>}, ${<code>[1, 2]</code>}
-   * program as data
-      * `'(lambda (x) x)`, `(list 'lambda (list 'x) 'x)`
    * head
       * `(car '(1 2))` ${<span>&rArr;</span>} `1`
       * ${<code>[1, 2][0]</code>}
    * tail
       * `(cdr '(1 2))` ${<span>&rArr;</span>} `(2)`
       * ${<span class="ov"><code>[1, 2].slice(1)</code></span>}
+   * program as data
+      * `'(lambda (x) x)`, `(list 'lambda (list 'x) 'x)`
 </MD>   
 </impress.slide>
 

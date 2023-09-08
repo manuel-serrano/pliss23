@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 10:24:38 2023 (serrano)                */
+/*    Last change :  Wed Sep  6 08:34:42 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -39,7 +39,7 @@ export const slide = <impress.slide title="Challenges">
    
      <li step="3-"> Minimalism
 <lstlisting step="3-" language="scheme">
-(let ((for (lambda (i) (if (${"<"} i 10) (begin (print i) (for (+ 1 i)))))))
+(letrec ((for (lambda (i) (if (${"<"} i 10) (begin (print i) (for (+ 1 i)))))))
    (for 0))
 (let for ((i 0))
    (if (${"<"} i 10) (begin (print i) (for (+ 1 i)))))

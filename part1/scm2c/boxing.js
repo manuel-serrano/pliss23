@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 11:00:32 2023 (serrano)                */
+/*    Last change :  Thu Sep  7 08:37:29 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -20,7 +20,7 @@ import { MARKDOWN as MD } from "hop:markdown";
 /*---------------------------------------------------------------------*/
 /*    A slide ...                                                      */
 /*---------------------------------------------------------------------*/
-export const slide = <impress.slide title="boxing" class="md">
+export const slide = <impress.slide title="Unifrom Representation: Boxing" class="md">
    <MD fontifier=${fontifier}>
    ${<div class="center">Boxing</div>}
 
@@ -30,7 +30,7 @@ enum types { FIXNUM, FLONUM, PAIR, FUNCTION, ... };
 
 typedef struct obj *obj_t;
 
-typedef struct box {
+typedef struct obj {
   enum types header;
   val_t val;
 }

@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 10:08:53 2023                          */
-/*    Last change :  Fri Aug 25 08:16:03 2023 (serrano)                */
+/*    Last change :  Wed Sep  6 08:08:31 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    Scheme primer                                                    */
@@ -28,7 +28,7 @@ import { slide as like } from "./like.js";
 /*    primer                                                           */
 /*---------------------------------------------------------------------*/
 export const primer = [
-   <chapter number="1" title=${<span class="care">Primer</span>}>
+   <chapter number="1" title=${<span class="care">Scheme</span>}>
       Primer
    </chapter>,
    implementations, syntax, church, expression, beauty, sugar, apply,

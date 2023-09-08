@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 09:47:02 2023 (serrano)                */
+/*    Last change :  Wed Sep  6 08:27:17 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -23,10 +23,10 @@ export const slide = <impress.slide title="Like" class="md">
    <MD>
    ${<div class="center">Why do I like Scheme?</div>}
 
+   * syntax
    * minimalist core language
    * beauty of the core concepts
    * clean semantics
-   * syntax
    * untypedness
 
 <span step="5"/>

@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 12:04:08 2023 (serrano)                */
+/*    Last change :  Thu Sep  7 08:50:01 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, Scheme compilation                                      */
@@ -32,20 +32,20 @@ struct _function {
   obj_t env0;
 }
 
-#define CLOSURE_ENV(clo, i) ((obj_t *)&(c->val.function.env0))[i]
+#define CLOSURE_ENV(clo, i) ((obj_t *)&((c ${">>"} 3)->val.function.env0))[i]
 
 obj_t make_closure(obj_t (*entry)(), long arity, long size) {
   obj_t c = GC_MALLOC(sizeof(enum types) + sizeof(struct _function) + sizeof(obj_t) * (size - 1));
   c->header = FUNCTION;
   c->val.function.arity = arity;
   c->val.function.entry = entry;
-  return c;
+  return c ${"<<"} 3;
 }
 
 obj_t adder(obj_t x) {
   obj_t c = make_closure(&lambda0, 1, 1);
   CLOSURE_ENV(c, 0) = x;
-  return x;  
+  return c;  
 }
 
 obj_t lambda0(obj_t clo, obj_t y) {

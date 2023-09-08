@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 08:16:22 2023 (serrano)                */
+/*    Last change :  Wed Sep  6 08:18:16 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -31,7 +31,7 @@ export const slide = <impress.slide title="Syntactic sugar" class="md">
 ;; (tmp => tmp + tmp)(3 * 4);
 ==>
 (let ((tmp (* 3 4))) (+ tmp tmp))
-;; { let tmp = 3 * 4; tmp + tmp;
+;; { let tmp = 3 * 4; tmp + tmp; }
 ```
    * sequence
 ```scheme
@@ -45,8 +45,9 @@ export const slide = <impress.slide title="Syntactic sugar" class="md">
    * binders
 ```scheme
 (define f (lambda (tmp) (+ tmp tmp)))
-(define (f tmp) (+ tmp tmp))
 ;; let f = tmp => tmp + tmp;
+==>
+(define (f tmp) (+ tmp tmp))
 ;; function f(tmp) { return tmp + tmp };
 ```
 
@@ -81,7 +82,7 @@ slide.css = <style>
 }
 
 div[data-step="1"] {
-   top: -17ex;
+   top: -19ex;
 }
 
 pre {

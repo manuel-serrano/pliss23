@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 12:55:20 2023 (serrano)                */
+/*    Last change :  Fri Sep  8 06:51:15 2023 (serrano)                */
 /*    Copyright   :  2015-23 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
@@ -40,7 +40,7 @@ obj_t F(obj_t n, obj_t m) {
   obj_t B = make_closure(&lambdaB, 0, 2);
   CLOSURE_ENV(b, 0) = n;
   CLOSURE_ENV(b, 1) = m;
-  return B;
+  return G(B);
 }
 
 obj_t lambdaB(obj_t env) {
