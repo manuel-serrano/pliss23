@@ -23,8 +23,8 @@ export const slide = <impress.slide title="Bibliography" class="md">
   <MD>
    ${<div class="center">Further readings...</div>}
 
-   * ${<span class="ref">POLP&rsquo;91</span>} Unboxed Objects and Polymorphic Typing. X. Leroy
-   * ${<span class="ref">ICFP&rsquo;96</span>} Storage Use Anaylysis, M. Serrano & M. Feeley
+   * ${<span class="ref">POPL&rsquo;91</span>} Unboxed Objects and Polymorphic Typing. X. Leroy
+   * ${<span class="ref">ICFP&rsquo;96</span>} Storage Use Analysis, M. Serrano & M. Feeley
    * Julia, ask Jan
 </MD>   
 </impress.slide>

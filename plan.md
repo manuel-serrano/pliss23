@@ -77,7 +77,7 @@ Scheme Primer 4
 
   - Expression based
     - no statments, 
-	   everything is an expressionn == everything has a value
+	   everything is an expression == everything has a value
 	   
   5 essential forms
   
@@ -274,9 +274,9 @@ Polymorphism, boxing & tagging
     * all values are boxed
 	
 ```
-typedef struct obj *obj_t;
+typedef struct box *obj_t;
 
-typedef struct box {
+struct box {
   long header;
   val_t val;
 }
@@ -364,7 +364,7 @@ Polymorphism, fixnums 4
 
 #define ADDFX(n, m) (n+m)
 
-#definne FLONUMP(o) (((o & 7) == 1) && o->header == FLONUM)
+#define FLONUMP(o) (((o & 7) == 1) && o->header == FLONUM)
 ```
   
 Polymorphism, futher reading
