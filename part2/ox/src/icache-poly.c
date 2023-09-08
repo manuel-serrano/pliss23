@@ -11,5 +11,5 @@ struct {
 if (obj->hclass == cache.hclass) val = obj->elements[cache.index];
 else if(obj->hclass == cache.aclass) ... // same as before
 #@newcode#else if (obj->hclass->vtable[cache.vindex] >= 0) val = obj->elements[obj->hclass->vtable[cache.vindex]];#/@newcode#
-else val = cacheReadMiss(obj, &cache);
+else val = cacheReadMiss(obj, &cache, "x");
 

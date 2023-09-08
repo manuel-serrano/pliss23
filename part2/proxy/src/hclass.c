@@ -6,5 +6,5 @@ struct {
 if (o->hclass == cache.hclass) {
    val = o->elements[cache.index]; // cache hit
 } else {
-   #@cache-miss#val = cacheReadMiss(o, &cache, "y");#/@cache-miss# // cache miss
+   #@cache-miss#val = cacheReadMiss(o, &cache, "x");#/@cache-miss# // cache miss
 }

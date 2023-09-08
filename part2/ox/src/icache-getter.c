@@ -6,4 +6,4 @@ struct {
 
 if (obj->hclass == cache.hclass) val = obj->elements[cache.index];
 else if (obj->hclass == cache.aclass) val = obj->elements[cache.index](obj);
-else val = cacheReadMiss(obj, &cache);
+else val = cacheReadMiss(obj, &cache, "x");

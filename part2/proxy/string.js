@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:24:33 2023                          */
-/*    Last change :  Wed Aug 23 16:30:42 2023 (serrano)                */
+/*    Last change :  Fri Sep  8 07:23:28 2023 (serrano)                */
 /*    Copyright   :  2023 Manuel Serrano                               */
 /*    -------------------------------------------------------------    */
 /*    JavaScript O["X"]                                                */
@@ -19,7 +19,7 @@ import { slideWidth } from "../../config.js"
 /*---------------------------------------------------------------------*/
 /*    stringjs                                                         */
 /*---------------------------------------------------------------------*/
-export const stringjs = <impress.slide class="chapter" title="string" data-x=${slideWidth + 100} data-duration=500>
+export const stringjs = <impress.slide class="chapter" title="string" data-x=${slideWidth + 100} data-duration=1000>
    <div class="chapter-title">
       <span class="important">"</span>x<span class="important">"</span>
    </div>

@@ -1,5 +1,5 @@
-(js-array-maybe-foreach arr arr %this
+($array-maybe-foreach arr arr %this
    (#@stk#stack-lambda#/@stk# (el)
-      (let ((con (js-get %this "console" %this)))
-	 (let ((log (js-get con "log" %this)))
-	    (js-invoke log el %this)))))
+      (let ((con ($get %this "console" %this)))
+	 (let ((log ($get con "log" %this)))
+	    ($call1 log con el %this)))))
