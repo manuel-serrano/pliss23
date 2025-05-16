@@ -1,10 +1,10 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/ecoop22/fonts.hss                         */
+/*    serrano/diffusion/talk/pliss23/fonts.hss                         */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:41:22 2015                          */
-/*    Last change :  Mon May 23 12:40:44 2022 (serrano)                */
-/*    Copyright   :  2015-22 Manuel Serrano                            */
+/*    Last change :  Fri May 16 20:28:11 2025 (serrano)                */
+/*    Copyright   :  2015-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Fonts declarations                                               */
 /*=====================================================================*/
@@ -19,55 +19,19 @@ $(define-hss-function (url-font local remote)
 /*    fonts                                                            */
 /*---------------------------------------------------------------------*/
 @font-face {
-  font-family: Kaffeesatz;
-  font-style: normal;
-  font-weight: normal;
-  src: url-font( "fonts/YanoneKaffeesatz/YanoneKaffeesatz-Regular.otf",
-     "http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/YDAoLskQQ5MOAgvHUQCcLbvy90DtE_Pg_qiF9bHvTzw.ttf" );
-}
-
-@font-face {
-  font-family: KaffeesatzBold;
-  font-style: normal;
-  font-weight: normal;
-  src: url-font( "fonts/YanoneKaffeesatz/YanoneKaffeesatz-Bold.otf",
-    "http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/We_iSDqttE3etzfdfhuPRUgbSk09ekaEjkXjfj0Ujx8.ttf" );
-}
-
-@font-face {
-  font-family: KaffeesatzLight;
-  font-style: normal;
-  font-weight: normal;
-  src: url-font( "fonts/YanoneKaffeesatz/YanoneKaffeesatz-Light.otf",
-    "http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/We_iSDqttE3etzfdfhuPRQqTbvZhoFeVhlHCS0LaBIg.ttf" );
-}
-
-@font-face {
   font-family: 'SpecialElite';
   font-style: normal;
   font-weight: 400;
-  src: url-font( "fonts/Special-Elite.woff",
-    "http://themes.googleusercontent.com/static/fonts/specialelite/v3/9-wW4zu3WNoD5Fjka35Jm_n8qdNnd5eCmWXua5W-n7c.woff") format('woff');
+  src: url("fonts/Special-Elite.woff"),
+    url("http://themes.googleusercontent.com/static/fonts/specialelite/v3/9-wW4zu3WNoD5Fjka35Jm_n8qdNnd5eCmWXua5W-n7c.woff") format('woff');
 }
 
 @font-face {
   font-family: 'FjallaOne';
   font-style: normal;
   font-weight: 400;
-  src: url-font( "fonts/FjallaOne.woff",
-    "http://themes.googleusercontent.com/static/fonts/fjallaone/v1/rxxXUYj4oZ6Q5oDJFtEd6hsxEYwM7FgeyaSgU71cLG0.woff") format('woff');
-}
-
-@font-face {
-  font-family: 'CourierMono';
-  font-style: normal;
-  src: url-font( "fonts/FreeMono.ttf", "FreeMono.ttf" );
-}
-
-@font-face {
-  font-family: 'CourierMonoBold';
-  font-style: bold;
-  src: url-font( "fonts/FreeMonoBold.ttf", "FreeMonoBold.ttf" );
+  src: url("fonts/FjallaOne.woff"),
+    url("http://themes.googleusercontent.com/static/fonts/fjallaone/v1/rxxXUYj4oZ6Q5oDJFtEd6hsxEYwM7FgeyaSgU71cLG0.woff") format('woff');
 }
 
 @font-face {  
@@ -86,11 +50,6 @@ $(define-hss-function (url-font local remote)
 }
 
 @font-face {
-  font-family: 'cms';
-  src: url( "fonts/CM/cms10.ttf" );
-}
-
-@font-face {
   font-family: 'cmsy';
   src: url( "fonts/CM/cmsy8.ttf" );
 }
@@ -98,5 +57,41 @@ $(define-hss-function (url-font local remote)
 @font-face {
   font-family: 'cmtt';
   src: url( "fonts/CM/cmtt10.ttf" );
+}
+
+@font-face {
+  font-family: Kaffeesatz;
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/YanoneKaffeesatz/YanoneKaffeesatz-Regular.otf');
+     url('http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/YDAoLskQQ5MOAgvHUQCcLbvy90DtE_Pg_qiF9bHvTzw.ttf');
+}
+
+@font-face {
+  font-family: KaffeesatzBold;
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/YanoneKaffeesatz/YanoneKaffeesatz-Bold.otf',
+    url('"http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/We_iSDqttE3etzfdfhuPRUgbSk09ekaEjkXjfj0Ujx8.ttf'));
+}
+
+@font-face {
+  font-family: KaffeesatzLight;
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/YanoneKaffeesatz/YanoneKaffeesatz-Light.otf',
+    url('http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/We_iSDqttE3etzfdfhuPRQqTbvZhoFeVhlHCS0LaBIg.ttf');
+}
+
+@font-face {
+  font-family: 'CourierMono';
+  font-style: normal;
+  src: url("fonts/FreeMono.ttf"), url("FreeMono.ttf");
+}
+
+@font-face {
+  font-family: 'CourierMonoBold';
+  font-style: bold;
+  src: url("fonts/FreeMonoBold.ttf"), url("FreeMonoBold.ttf");
 }
 

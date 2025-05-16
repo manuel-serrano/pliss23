@@ -3,20 +3,20 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:41:22 2015                          */
-/*    Last change :  Fri Aug 25 09:52:49 2023 (serrano)                */
-/*    Copyright   :  2015-23 Manuel Serrano                            */
+/*    Last change :  Thu May 15 16:35:10 2025 (serrano)                */
+/*    Copyright   :  2015-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
-/*    ECOOP22 presentation CSS                                         */
+/*    PLISS'23 presentation CSS                                        */
 /*=====================================================================*/
 
 /*---------------------------------------------------------------------*/
 /*    Imports                                                          */
 /*---------------------------------------------------------------------*/
 @import 'math.hss';
-@import 'fonts.hss?hss';
-@import 'theme.hss?hss';
-@import 'listings.hss?hss';
-@import 'markdown.hss?hss';
+@import 'fonts.hss';
+@import 'theme.hss';
+@import 'listings.hss';
+/* @import 'markdown.hss';                                             */
 
 /*---------------------------------------------------------------------*/
 /*    body                                                             */
@@ -28,7 +28,7 @@ body {
 /*---------------------------------------------------------------------*/
 /*    slides                                                           */
 /*---------------------------------------------------------------------*/
-hopimpress-slide {
+div[data-hss-tag=hopimpress-slide] {
   width: var(--slideWidth);  
   height: var(--slideHeight);  
   font-family: Kaffeesatz;

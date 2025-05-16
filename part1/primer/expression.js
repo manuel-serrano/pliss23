@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Thu Aug 24 16:17:10 2023 (serrano)                */
-/*    Copyright   :  2015-23 Manuel Serrano                            */
+/*    Last change :  Thu May 15 16:48:46 2025 (serrano)                */
+/*    Copyright   :  2015-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, part 1 title                                            */
 /*=====================================================================*/
@@ -13,8 +13,8 @@
 /*---------------------------------------------------------------------*/
 /*    import/export ...                                                */
 /*---------------------------------------------------------------------*/
-import * as impress from "hopimpress-0.6.*.hz";
-import { MARKDOWN as MD } from "hop:markdown";
+import * as impress from "@hop/hopimpress";
+import { MARKDOWN as MD } from "@hop/markdown";
 
 /*---------------------------------------------------------------------*/
 /*    A slide ...                                                      */

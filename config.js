@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 15:39:31 2015                          */
-/*    Last change :  Tue Aug 22 07:27:06 2023 (serrano)                */
-/*    Copyright   :  2015-23 Manuel Serrano                            */
+/*    Last change :  Fri May 16 10:16:38 2025 (serrano)                */
+/*    Copyright   :  2015-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    HOPJS talk configuration                                         */
 /*=====================================================================*/
@@ -14,7 +14,7 @@
 /*    module ...                                                       */
 /*---------------------------------------------------------------------*/
 import * as path from "path";
-import * as hopconfig from "hop:config";
+import * as hopconfig from "@hop/config";
 
 export { inriaSVG };
 
@@ -24,12 +24,7 @@ export { inriaSVG };
 export const ROOT = path.dirname( module.filename );
 const inriaSVG = path.join( ROOT, "svg/inria.svgz" );
 
-
-
-
-
 export const name = "PLISS23";
-export const impress = "hopimpress-0.6.*.hz";
 export const slideWidth = 1920, slideHeight = 1080;
 
 export const theme = path.join( ROOT, "themes/grey.json" );

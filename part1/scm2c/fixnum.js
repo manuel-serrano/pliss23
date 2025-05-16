@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Fri Aug 25 11:59:35 2023 (serrano)                */
-/*    Copyright   :  2015-23 Manuel Serrano                            */
+/*    Last change :  Thu May 15 16:51:25 2025 (serrano)                */
+/*    Copyright   :  2015-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23, Scheme compilation                                      */
 /*=====================================================================*/
@@ -13,9 +13,9 @@
 /*---------------------------------------------------------------------*/
 /*    import/export ...                                                */
 /*---------------------------------------------------------------------*/
-import * as impress from "hopimpress-0.6.*.hz";
-import * as fontifier from "hop:fontifier";
-import { MARKDOWN as MD } from "hop:markdown";
+import * as impress from "@hop/hopimpress";
+import { MARKDOWN as MD } from "@hop/markdown";
+import * as fontifier from "@hop/fontifier";
 
 /*---------------------------------------------------------------------*/
 /*    A slide ...                                                      */

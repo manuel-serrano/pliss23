@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Sat Nov 14 08:32:31 2015                          */
-/*    Last change :  Fri Aug 25 11:58:25 2023 (serrano)                */
-/*    Copyright   :  2015-23 Manuel Serrano                            */
+/*    Last change :  Thu May 15 16:40:25 2025 (serrano)                */
+/*    Copyright   :  2015-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Listings                                                         */
 /*=====================================================================*/
@@ -13,8 +13,8 @@
 /*---------------------------------------------------------------------*/
 /*    The module                                                       */
 /*---------------------------------------------------------------------*/
-import * as md from "hop:markdown";
-import * as fontifier from "hop:fontifier";
+import * as md from "@hop/markdown";
+import * as fontifier from "@hop/fontifier";
 
 export { LSTINPUTLISTING, LSTLISTING };
 

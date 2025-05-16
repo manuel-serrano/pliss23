@@ -1,9 +1,23 @@
 {
-   "name": "pliss23",
-   "author": "Serrano",
-   "version": "1.0.0",
-   "category": "course",
-   "title": "PLISS",
-   "directory": "talk",
-   "comment": "PLISS'23 course"
+  "name": "pliss23",
+  "author": "Serrano",
+  "version": "1.1.0",
+  "category": "course",
+  "title": "PLISS",
+  "directory": "talk",
+  "comment": "PLISS'23 course",
+  "dependencies": {
+    "@hop/hiphop": "https://www-sop.inria.fr/members/Manuel.Serrano/software/npmx/hiphop.tgz",
+    "@hop/hop": "https://www-sop.inria.fr/members/Manuel.Serrano/software/npmx/hop.tgz",
+    "@hop/fontifier": "https://www-sop.inria.fr/members/Manuel.Serrano/software/npmx/fontifier.tgz",
+    "@hop/hopimpress": "https://www-sop.inria.fr/members/Manuel.Serrano/software/npmx/hopimpress.tgz"
+  },
+  "scripts": {
+    "build": "node_modules/@hop/hopc/bin/hopc.mjs -o pliss23.mjs pliss23.hop.mjs; node_modules/@hop/hopc/bin/hopc.mjs -o qrcode.mjs qrcode.hop.mjs",
+    "slides": "hop --no-zeroconf -p 8888 --so-policy ifexists pliss23.mjs",
+    "slides.node": "nodejs pliss23.mjs",
+    "talk": "xset s off -dpms && hop --no-zeroconf -p 8888 --so-policy ifexists pliss23.mjs",
+    "talk.node": "xset s off -dpms && node pliss23.mjs",
+    "debug": "hop --no-zeroconf -v10 -g -p 8888 --so-policy ifexists pliss23.mjs"
+  }
 }

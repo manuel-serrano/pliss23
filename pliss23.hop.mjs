@@ -1,10 +1,10 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/pliss23/pliss23.js                        */
+/*    serrano/diffusion/talk/pliss23/pliss23.hop.mjs                   */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 12:03:19 2016                          */
-/*    Last change :  Thu Sep  7 09:20:24 2023 (serrano)                */
-/*    Copyright   :  2016-23 Manuel Serrano                            */
+/*    Last change :  Fri May 16 20:16:04 2025 (serrano)                */
+/*    Copyright   :  2016-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    PLISS23 presentation                                             */
 /*=====================================================================*/
@@ -13,13 +13,19 @@
 /*---------------------------------------------------------------------*/
 /*    imports                                                          */
 /*---------------------------------------------------------------------*/
-import { name, slideWidth, slideHeight, impress as impressv } from "./config.js";
-
-//import { serverAliases } from "hop:config";
-import * as fontifier from "hop:fontifier";
+import { name, slideWidth, slideHeight } from "./config.js";
+import * as hopconfig from "@hop/config";
+import * as fontifier from "@hop/fontifier";
 import * as path from "path";
-import * as impress from "hopimpress-0.6.*.hz";
-import { QRCODE } from "./qrcode.js";
+import * as impress from "@hop/hopimpress";
+import { QRCODE } from "./qrcode.mjs";
+
+/*---------------------------------------------------------------------*/
+/*    R ... hop resolver                                               */
+/*---------------------------------------------------------------------*/
+const R = {
+   resolve: file => require.resolve(file)
+};
 
 /*---------------------------------------------------------------------*/
 /*    pliss23 ...                                                      */
@@ -37,14 +43,23 @@ service pliss23(o) {
    return <impress.html logo=${require.resolve("./etc/logo.png")}>
 
      <head css=${impress.cssCover}
-	   include="hop-window"
            title=${name}
 	   idiom="scheme"
-           jscript=${[impress.jscript]}/>
+           jscript=${[hopconfig.schemeRuntime, impress.jscript]}
+           include="hop-window"/>
 
-     <script type="module">
-      import { qrcode } from ${require.resolve("./qrcode.js")}
+     <script type="importmap"> {
+        "imports": {
+           "@hop/hop": "${R.resolve('@hop/hop/client.mjs')}",
+           "qrcode.mjs": "${R.resolve('qrcode.mjs')}"
+	}
+     }
      </script>
+      
+     <script type="module">
+        import { qrcode } from "qrcode.mjs";
+     </script>
+
      <impress.cover title=${name} src=${pliss23slides}>
        <ol>
 	 ${ impress.slideNodes(s)
@@ -56,9 +71,9 @@ service pliss23(o) {
 	    } )
 	  }
        </ol>
-      </impress.cover>
+     </impress.cover>
 
-      <div id="qrcode">
+     <div id="qrcode">
        <qrcode data=${url} pixelSize=6/>
        <div><tt>${url}</tt></div>
      </div>
@@ -79,8 +94,9 @@ service pliss23slides(o) {
 		  pliss23.resource("chapter.hss")]}
            idiom="scheme"
            include="hop-canvas"
-           script=${[impress.jscript]}/>
+           script=${[hopconfig.schemeRuntime, impress.jscript]}/>
 
+     <script>InitHopServer("localhost", 8080);</script>
      <impress.panel id="panel" controls=${false}/>
      
      ${slides(width, height)}
@@ -124,11 +140,11 @@ function slides(width, height) {
       <impress.row class="row-stack" data-x=0 data-y=0>
        	${title}
       </impress.row>
-     
       <impress.row class="row-stack" data-x=0 data-y=${height + 100}>
          ${part1}
       </impress.row>
       
+<!--     
       <impress.row class="row-stack" data-x=0 data-y=${(height + 100) * 2}>>
          ${part2}
       </impress.row>
@@ -140,6 +156,7 @@ function slides(width, height) {
       <impress.row class="row-stack" data-x=0 data-y=${(height + 100) * 4}>>
          ${calibration}
       </impress.row>
+-->      
    
    </impress.impress>
 }
@@ -147,8 +164,8 @@ function slides(width, height) {
 import { calibration } from "./calibration.js";
 import { title } from "./title.js";
 import { part1 } from "./part1/part1.js";
-import { part2 } from "./part2/part2.js";
-import { benchmark } from "./benchmark/benchmark.js";
+/* import { part2 } from "./part2/part2.js";                           */
+/* import { benchmark } from "./benchmark/benchmark.js";               */
 
 console.log(`"http://localhost:${hop.port}/hop/pliss23" ready...`);
 console.log(`"http://localhost:${hop.port}/hop/hopimpress/remote" ready...`);
