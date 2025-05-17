@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  manuel serrano                                    */
 /*    Creation    :  Sat Aug 13 15:56:38 2022                          */
-/*    Last change :  Tue Aug 22 10:47:31 2023 (serrano)                */
-/*    Copyright   :  2022-23 manuel serrano                            */
+/*    Last change :  Sat May 17 08:27:41 2025 (serrano)                */
+/*    Copyright   :  2022-25 manuel serrano                            */
 /*    -------------------------------------------------------------    */
 /*    C funcall                                                        */
 /*=====================================================================*/
@@ -14,7 +14,7 @@
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
 import * as path from "path";
-import * as impress from "hopimpress-0.6.*.hz";
+import * as impress from "@hop/hopimpress";
 import { LSTINPUTLISTING } from "../../listings.js";
 
 export { funcallC };

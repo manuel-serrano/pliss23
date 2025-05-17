@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:36:34 2023                          */
-/*    Last change :  Wed Aug 23 08:41:14 2023 (serrano)                */
-/*    Copyright   :  2023 Manuel Serrano                               */
+/*    Last change :  Sat May 17 08:30:49 2025 (serrano)                */
+/*    Copyright   :  2023-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Let declaration                                                  */
 /*=====================================================================*/
@@ -14,8 +14,8 @@
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
 import * as path from "path";
-import * as impress from "hopimpress-0.6.*.hz";
-import { MARKDOWN as MD } from "hop:markdown";
+import * as impress from "@hop/hopimpress";
+import { MARKDOWN as MD } from "@hop/markdown";
 
 /*---------------------------------------------------------------------*/
 /*    Lexcical                                                         */

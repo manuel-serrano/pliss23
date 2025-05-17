@@ -1,10 +1,10 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/strangeloop22/benchmark/hopstone.js       */
+/*    serrano/diffusion/talk/pliss23/benchmark/hopstone.js             */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Fri May 28 13:13:47 2021                          */
-/*    Last change :  Thu Aug 18 07:53:51 2022 (serrano)                */
-/*    Copyright   :  2021-22 Manuel Serrano                            */
+/*    Last change :  Sat May 17 08:40:58 2025 (serrano)                */
+/*    Copyright   :  2021-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    JavaScript hopstone benchmark                                    */
 /*=====================================================================*/
@@ -13,7 +13,7 @@
 /*---------------------------------------------------------------------*/
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
-import * as impress from "hopimpress-0.6.*.hz";
+import * as impress from "@hop/hopimpress";
 import { gnuplot } from "../utils.js";
 
 export { hopstone };

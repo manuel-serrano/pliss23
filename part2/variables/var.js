@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:36:34 2023                          */
-/*    Last change :  Tue Aug 22 12:23:06 2023 (serrano)                */
-/*    Copyright   :  2023 Manuel Serrano                               */
+/*    Last change :  Sat May 17 08:28:21 2025 (serrano)                */
+/*    Copyright   :  2023-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Var declaration                                                  */
 /*=====================================================================*/
@@ -14,7 +14,7 @@
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
 import * as path from "path";
-import * as impress from "hopimpress-0.6.*.hz";
+import * as impress from "@hop/hopimpress";
 import { LSTINPUTLISTING } from "../../listings.js";
 
 /*---------------------------------------------------------------------*/

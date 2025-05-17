@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Fri May 28 13:13:47 2021                          */
-/*    Last change :  Thu Aug 24 10:18:35 2023 (serrano)                */
-/*    Copyright   :  2021-23 Manuel Serrano                            */
+/*    Last change :  Sat May 17 08:40:44 2025 (serrano)                */
+/*    Copyright   :  2021-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    JavaScript benchmark deltablue                                   */
 /*=====================================================================*/
@@ -13,7 +13,7 @@
 /*---------------------------------------------------------------------*/
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
-import * as impress from "hopimpress-0.6.*.hz";
+import * as impress from "@hop/hopimpress";
 import { LSTINPUTLISTING } from "../listings.js";
 
 export { deltablue };

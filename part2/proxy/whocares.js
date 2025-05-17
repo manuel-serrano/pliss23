@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Tue Aug 22 11:36:34 2023                          */
-/*    Last change :  Wed Aug 23 09:48:23 2023 (serrano)                */
-/*    Copyright   :  2023 Manuel Serrano                               */
+/*    Last change :  Sat May 17 08:34:22 2025 (serrano)                */
+/*    Copyright   :  2023-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    A slide                                                          */
 /*=====================================================================*/
@@ -14,7 +14,7 @@
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
 import * as path from "path";
-import * as impress from "hopimpress-0.6.*.hz";
+import * as impress from "@hop/hopimpress";
 
 /*---------------------------------------------------------------------*/
 /*    whocares                                                         */

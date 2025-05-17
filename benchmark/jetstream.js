@@ -1,10 +1,10 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/mplr22/benchmark/jetstream.js             */
+/*    serrano/diffusion/talk/pliss23/benchmark/jetstream.js            */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Fri May 28 13:13:47 2021                          */
-/*    Last change :  Tue Sep 13 08:22:45 2022 (serrano)                */
-/*    Copyright   :  2021-22 Manuel Serrano                            */
+/*    Last change :  Sat May 17 08:40:22 2025 (serrano)                */
+/*    Copyright   :  2021-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    JavaScript jetstream benchmark                                   */
 /*=====================================================================*/
@@ -13,7 +13,7 @@
 /*---------------------------------------------------------------------*/
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
-import * as impress from "hopimpress-0.6.*.hz";
+import * as impress from "@hop/hopimpress";
 import { gnuplot } from "../utils.js";
 
 export { jetstream };

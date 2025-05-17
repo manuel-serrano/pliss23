@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:24:34 2015                          */
-/*    Last change :  Thu Sep  7 09:40:27 2023 (serrano)                */
-/*    Copyright   :  2015-23 Manuel Serrano                            */
+/*    Last change :  Sat May 17 08:24:56 2025 (serrano)                */
+/*    Copyright   :  2015-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Pliss23 par 2 title                                              */
 /*=====================================================================*/
@@ -15,8 +15,7 @@
 /*---------------------------------------------------------------------*/
 import * as path from "path";
 import { inriaSVG } from "../config.js";
-import * as impress from "hopimpress-0.6.*.hz";
-import { MARKDOWN as MD } from "hop:markdown";
+import * as impress from "@hop/hopimpress";
 
 export { slide };
 

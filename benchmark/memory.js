@@ -1,10 +1,10 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/strangeloop22/benchmark/memory.js         */
+/*    serrano/diffusion/talk/pliss23/benchmark/memory.js               */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Mon Sep 19 13:43:16 2022                          */
-/*    Last change :  Mon Sep 19 14:37:07 2022 (serrano)                */
-/*    Copyright   :  2022 Manuel Serrano                               */
+/*    Last change :  Sat May 17 08:41:04 2025 (serrano)                */
+/*    Copyright   :  2022-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Memory footprint                                                 */
 /*=====================================================================*/
@@ -13,7 +13,7 @@
 /*---------------------------------------------------------------------*/
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
-import * as impress from "hopimpress-0.6.*.hz";
+import * as impress from "@hop/hopimpress";
 import { gnuplot } from "../utils.js";
 
 export { memory };

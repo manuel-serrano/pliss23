@@ -1,10 +1,10 @@
 /*=====================================================================*/
-/*    serrano/diffusion/talk/strangeloop22/benchmark/earley.js         */
+/*    serrano/diffusion/talk/pliss23/benchmark/earley.js               */
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Fri May 28 13:13:47 2021                          */
-/*    Last change :  Wed Aug 17 19:57:49 2022 (serrano)                */
-/*    Copyright   :  2021-22 Manuel Serrano                            */
+/*    Last change :  Sat May 17 08:40:37 2025 (serrano)                */
+/*    Copyright   :  2021-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    JavaScript benchmark earley                                      */
 /*=====================================================================*/
@@ -13,7 +13,7 @@
 /*---------------------------------------------------------------------*/
 /*    import ...                                                       */
 /*---------------------------------------------------------------------*/
-import * as impress from "hopimpress-0.6.*.hz";
+import * as impress from "@hop/hopimpress";
 import { LSTINPUTLISTING } from "../listings.js";
 
 export { earley };
