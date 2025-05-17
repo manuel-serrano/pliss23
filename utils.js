@@ -3,8 +3,8 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Thu May 26 16:19:55 2022                          */
-/*    Last change :  Thu Aug 24 08:03:36 2023 (serrano)                */
-/*    Copyright   :  2022-23 Manuel Serrano                            */
+/*    Last change :  Sat May 17 13:35:46 2025 (serrano)                */
+/*    Copyright   :  2022-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Utilities                                                        */
 /*=====================================================================*/
@@ -14,7 +14,7 @@
 /*---------------------------------------------------------------------*/
 import * as fs from "fs";
 import * as path from "path";
-import { system, systemSync } from "hop:system";
+import { system, systemSync } from "@hop/system";
 
 export { gnuplot, tikz };
 

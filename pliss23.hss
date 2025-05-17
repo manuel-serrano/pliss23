@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:41:22 2015                          */
-/*    Last change :  Thu May 15 16:35:10 2025 (serrano)                */
+/*    Last change :  Sat May 17 13:42:19 2025 (serrano)                */
 /*    Copyright   :  2015-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    PLISS'23 presentation CSS                                        */
@@ -16,7 +16,7 @@
 @import 'fonts.hss';
 @import 'theme.hss';
 @import 'listings.hss';
-/* @import 'markdown.hss';                                             */
+@import 'markdown.hss';
 
 /*---------------------------------------------------------------------*/
 /*    body                                                             */

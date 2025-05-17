@@ -3,7 +3,7 @@
 /*    -------------------------------------------------------------    */
 /*    Author      :  Manuel Serrano                                    */
 /*    Creation    :  Wed Oct 14 14:41:22 2015                          */
-/*    Last change :  Fri May 16 20:28:11 2025 (serrano)                */
+/*    Last change :  Sat May 17 13:45:40 2025 (serrano)                */
 /*    Copyright   :  2015-25 Manuel Serrano                            */
 /*    -------------------------------------------------------------    */
 /*    Fonts declarations                                               */
@@ -52,6 +52,11 @@ $(define-hss-function (url-font local remote)
 @font-face {
   font-family: 'cmsy';
   src: url( "fonts/CM/cmsy8.ttf" );
+}
+
+@font-face {
+  font-family: 'cms';
+  src: url( "fonts/CM/cms10.ttf" );
 }
 
 @font-face {
